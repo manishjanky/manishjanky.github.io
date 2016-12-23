@@ -1,0 +1,96 @@
+﻿<aside class=" col l4 m12 s12 sidebar">
+    <div class="navIcon text-center">
+        <a href="" data-activates="slide-out" class="btn-floating blue button-collapse"><span class="fa fa-bars"></span></a>
+        <ul id="slide-out" class="side-nav">
+            <li>Projects</li>
+            <li>Cover Letter</li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Subheader</a></li>
+            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
+    </div>
+    <div class="row heading">
+        <div class="image">
+            <a href="#/index.html">
+                <img src="https://lh5.googleusercontent.com/-zZmk5Oe6Hm8/AAAAAAAAAAI/AAAAAAAAAHg/PgDZ_telmuE/photo.jpg" err-src="images/ManishKumar.jpg" />
+            </a>
+        </div>
+        <div class=" title col l12">
+            <h5 class="text-center">{{user.name}}</h5>
+            <h6 class="text-center">{{user.designation}}</h6>
+        </div>
+    </div>
+    <div class=" row col l12 m12 s12 ">
+        <div class="col l3 m3 s3" >
+            <span class="fa fa-2x fa-user"></span>
+        </div>
+        <div class="col l9 m9 s9 info">
+            <p class="zeroMargin">
+                {{user.aboutMe}}
+            </p>
+        </div>
+    </div>
+    <div class=" row col l12 m12 s12 ">
+        <div class="col l3 m3 s3">
+            <span class="fa fa-2x fa-phone"></span>
+        </div>
+        <div class="col l9 m9 s9 info">
+            <div>
+                <p class="zeroMargin">
+                    Mobile:
+                    {{user.contactDetails.contactNumber}}
+                </p>
+            </div>
+            <div ng-if="user.contactDetails.alternateNumber">
+                <p class="zeroMargin">
+                    Alternate:
+                    {{user.contactDetails.alternateNumber}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class=" row col l12 m12 s12 ">
+        <div class="col l3 m3 s3">
+            <span class="fa fa-2x fa-envelope"></span>
+        </div>
+        <div class="col l9 m9 s9 info">
+            <div>
+                <p class="zeroMargin">
+                    {{user.contactDetails.email}}
+                </p>
+            </div>
+            <div ng-if="user.alternateEmail">
+                <p class="zeroMargin">
+                    {{user.contactDetails.alternateEmail}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class=" row col l12 m12 s12 ">
+        <div class="col l3 m3 s3">
+            <span class="fa fa-2x fa-address-card"></span>
+        </div>
+        <div class="col l9 m9 s9 info">
+            <div>
+                <p class="zeroMargin">
+                    {{user.contactDetails.address.street}}
+                    <br />
+                    {{user.contactDetails.address.society}}
+                    <br />
+                    {{user.contactDetails.address.city}}
+                    <br />
+                    {{user.contactDetails.address.state}} - {{user.contactDetails.address.pin}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row col l12 m12 s12">
+        <a href="http://stackoverflow.com/users/4948483/manish">
+            <img src="http://stackoverflow.com/users/flair/4948483.png?theme=clean" width="208" height="58" alt="profile for Manish at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Manish at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+        </a>
+    </div>
+</aside>
+<script>
+    $(".button-collapse").sideNav();
+</script>
+  
