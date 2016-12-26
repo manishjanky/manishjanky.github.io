@@ -128,6 +128,29 @@
 		"facebook":"http://facebook.com/manishjanky",
 		"googlePlus":"https://plus.google.com/107936389381835582160",
 		"twitter":""
-   }
-		
+   },
+   "projects":[
+       {
+           "name":"StoneSoup",
+           "description":"This is a web based application that allows users to add, edit and publish engineering data. It provides Customizable Configurations to different groups. Allows saving custom configuration locally/on the server. Data generated from Stone Soup helps in design validations and automate repetitive design engineering activities.",
+           "technologies":"",
+           "client":"Boeing",
+		   "startDate":"Oct 2015",
+           "endDate":""
+       },
+       {
+           "name":"Quality Dashboard",
+           "description":"This is a web based system for monitoring the quality of various layers of an application.It provides all the information required by the quality team in a single nutshell. This reduced the extensive mail chains for getting the complete information. Was also awarded as the best POC in AutoThon (A Infosys wide event).",
+           "technologies":"",
+           "client":"ABN Amro Bank",
+		   "startDate":"Nov 2014",
+           "endDate":"Sep 2015"
+       },
+       {
+           "name":"Skill Tracker",
+           "description":"A internal tool that helps to keep a track of skillset of all the team members. It provides the users with the functionlaity of adding/updating their skills. The manager can approve or rejects skill requests. Users can connects to users possessing same skills. They can add interests (technologies they wish to learn), can search for members based on thier skillset, designation, role etc.",
+           "technologies":"AngularJS,CSS,HTML,JavaScript,BootStrap,MSSQL,ASP.NET Services",
+           "client":"Infosys"
+       }
+   ]	
 }
