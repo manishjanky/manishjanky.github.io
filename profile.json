@@ -80,24 +80,16 @@
          "rating":7
       },
       {
-         "skill":"jQuery",
-         "rating":8
-      },
-      {
          "skill":"ASP.NET",
          "rating":6.5
       },
       {
-         "skill":"SQL",
-         "rating":7.5
-      },
-      {
-         "skill":"PL/SQL",
-         "rating":7.5
-      },
-      {
          "skill":"MSSQL",
          "rating":7.5
+      },
+      {
+         "skill":"jQuery",
+         "rating":7
       }
    ],
    "interests":[
@@ -116,10 +108,10 @@
          "name":"70-461 Querying Microsoft SQL Server 2012/2014"
       }
    ],
-   "socialProfiles":[
+   "socialProfiles":{
 		"facebook":"http://facebook.com/manishjanky",
 		"googlePlus":"https://plus.google.com/107936389381835582160",
 		"twitter":""
-
-   ]
+   }
+		
 }
