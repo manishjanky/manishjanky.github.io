@@ -1,0 +1,30 @@
+
+.sidebar {
+  text-align: left;
+  color: #ffffff;
+  background-color: #F44336;
+  overflow: hidden;
+
+}
+
+
+
+.progress .determinate {
+    background-color: #F44336;
+}
+.progress .determinate .fa{
+    position:absolute;
+    top:-5px;
+    font-size:12px;
+    right:0px;
+    color: #F44336;
+}
+
+
+.interests{
+    color:#F44336;
+}
+
+blockquote{
+    border-left: 5px solid #5da4d9;
+}
