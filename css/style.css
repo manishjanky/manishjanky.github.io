@@ -106,7 +106,7 @@ p{
     list-style-type: none;
 }*/
 }
-li:before {
+section li:before {
   content: "\f046"; /* FontAwesome Unicode */
   font-family: FontAwesome;
   display: inline-block;
@@ -130,6 +130,9 @@ li:before {
 
 .card-content h3{
     margin-bottom:20px;
+}
+.interests{
+    color: #5da4d9;
 }
 @media screen and ( min-height: 650px ){
     .sidebar{
