@@ -150,7 +150,9 @@
            "name":"Skill Tracker",
            "description":"A internal tool that helps to keep a track of skillset of all the team members. It provides the users with the functionlaity of adding/updating their skills. The manager can approve or rejects skill requests. Users can connects to users possessing same skills. They can add interests (technologies they wish to learn), can search for members based on thier skillset, designation, role etc.",
            "technologies":"AngularJS, CSS, HTML5, JavaScript, BootStrap, MSSQL, ASP.NET Services",
-           "client":"Infosys"
+           "client":"Infosys",
+           "startDate":"Nov 2016",
+           "endDate":""
        }
    ]	
 }

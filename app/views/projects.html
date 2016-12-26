@@ -12,7 +12,7 @@
                 <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">{{project.name}}<i class="fa fa-close right"></i></span>
                     <p class="flow-text">{{project.description}}</p>
-                    <div ng-if="project.startDate" class="flow-text">Time: From {{project.startDate}} To {{project.endDate}}</div>
+                    <div ng-if="project.startDate" class="flow-text">Time: From {{project.startDate}} To {{project.endDate}}<span ng-if="!project.endDate"></span></div>
                     <div ng-if="project.client" class="flow-text">Client: {{project.client}}</div>
                     <div ng-if="project.technologies" class="flow-text">Technologies: {{project.technologies}}</div>
                 </div>
