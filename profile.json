@@ -80,6 +80,10 @@
          "rating":7
       },
       {
+         "skill":"jQuery",
+         "rating":8
+      },
+      {
          "skill":"ASP.NET",
          "rating":6.5
       },
@@ -94,10 +98,6 @@
       {
          "skill":"MSSQL",
          "rating":7.5
-      },
-      {
-         "skill":"jQuery",
-         "rating":7
       }
    ],
    "interests":[
