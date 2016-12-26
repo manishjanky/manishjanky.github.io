@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="manish" ng-controller="styleController">
 <head>
     <title>Manish Kumar</title>
     <script src="Libraries/jQuery/jquery-2.1.4.min.js"></script>
@@ -10,10 +10,12 @@
     <script src="Libraries/materialize/js/materialize.min.js"></script>
     <script src="app/module/app.js"></script>
     <script src="app/controllers/homeController.js"></script>
-    <link href="css/style.css" rel="stylesheet" />
+    <script src="app/controllers/styleController.js"></script>
+    <link ng-href="css/style.css" rel="stylesheet" />
+    <link ng-href="css/{{styleSheet}}.css" rel="stylesheet" />
 </head>
-<body ng-app="manish">
-    <div ng-view >
+<body>
+    <div ng-view>
 
     </div>
 </body>
