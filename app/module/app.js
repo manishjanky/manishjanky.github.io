@@ -1,4 +1,4 @@
-﻿var manish = angular.module("manish", ['ngRoute']);
+var manish = angular.module("manish", ['ngRoute']);
 
 manish.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider.
@@ -13,6 +13,13 @@ manish.config(['$routeProvider', '$locationProvider', function ($routeProvider, 
       })    
 }]);
 
+manish.service('profileService', function ($http) {
+    this.userProfile = null;
+    this.getUserProfile = function () {
+        return $http.get("/profile.json");
+    }
+    
+})
 manish.directive('errSrc', function () {
     return {
         link: function (scope, element, attrs) {
@@ -24,40 +31,5 @@ manish.directive('errSrc', function () {
         }
     }
 });
-
-manish.directive('tooltipped', function ($compile, $timeout) {
-    return {
-        restrict:'A',
-        link: function (scope, element, attrs) {
-            var rmDestroyListener = Function.prototype;
-            attrs.$observe('tooltipped', function (value) {
-                if (value === 'false') {
-                    element.tooltip("remove");
-                   
-                } else if (value !== 'false') {
-                    init();
-                }
-            });
-             function init() {
-                debugger
-                element.addClass("tooltipped");
-                $compile(element.contents())(scope);
-                $timeout(function () {
-                    if (element.attr('data-tooltip-id')) {
-                        element.tooltip('remove');
-                    }
-                    element.tooltip();
-                });
-               
-                element.on('$destroy', function () {
-                    element.tooltip("remove");
-                });
-
-                //alert("sdfsef")
-            }
-
-        }
-    }
-})
 
 
