@@ -55,13 +55,7 @@ p{
 .fullHeight{
     height:100%;
 }
-.sidebar {
-  text-align: left;
-  color: #ffffff;
-  background-color: #5da4d9;
-  overflow: hidden;
 
-}
 .sidebar .heading{
     position:relative;
 }
@@ -81,8 +75,10 @@ p{
     position:absolute;
     margin-top:10px;
     margin-left:10px;
+
     z-index:3;
 }
+
 .image{
     position:relative;
 }
@@ -117,23 +113,10 @@ section li:before {
  overflow: visible;
 }
 
-.progress .determinate {
-    background-color: deepskyblue;
-}
-.progress .determinate .fa{
-    position:absolute;
-    top:-5px;
-    font-size:12px;
-    right:0px;
-    color: deepskyblue;
-}
-
 .card-content h3{
     margin-bottom:20px;
 }
-.interests{
-    color: #5da4d9;
-}
+
 @media screen and ( min-height: 650px ){
     .sidebar{
         min-height:100% !important;
