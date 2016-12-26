@@ -1,12 +1,12 @@
 <div class="fixed-action-btn ">
-    <a class="btn-floating btn-large" ng-class="{'blue':$parent.styleSheet=='blue','red':$parent.styleSheet=='red','green':$parent.styleSheet=='green','orange':$parent.styleSheet=='orange','purple':$parent.styleSheet=='purple'}">
+    <a class="btn-floating btn-large" ng-class="$parent.styleSheet">
         <i class="large fa fa-snowflake-o"></i>
     </a>
     <ul>
-        <li title="Red Theme"><a class="btn-floating red" ng-click="$parent.updateStyle('red')"><i class="fa fa-snowflake-o"></i></a></li>
-        <li title="Green Theme"><a class="btn-floating green" ng-click="$parent.updateStyle('green')"><i class="fa fa-snowflake-o"></i></a></li>
-        <li title="Blue Theme"><a class="btn-floating blue" ng-click="$parent.updateStyle('blue')"><i class="fa fa-snowflake-o"></i></a></li>
-        <li title="Orange Theme"><a class="btn-floating orange" ng-click="$parent.updateStyle('orange')"><i class="fa fa-snowflake-o"></i></a></li>
-        <li title="Purple Theme"><a class="btn-floating purple" ng-click="$parent.updateStyle('purple')"><i class="fa fa-snowflake-o"></i></a></li>
+        <li title="Red Theme"><a class="btn-floating red" ng-click="$parent.updateStyle('red')"></a></li>
+        <li title="Green Theme"><a class="btn-floating green" ng-click="$parent.updateStyle('green')"></a></li>
+        <li title="Blue Theme"><a class="btn-floating blue" ng-click="$parent.updateStyle('blue')"></a></li>
+        <li title="Orange Theme"><a class="btn-floating orange" ng-click="$parent.updateStyle('orange')"></a></li>
+        <li title="Purple Theme"><a class="btn-floating purple" ng-click="$parent.updateStyle('purple')"></a></li>
     </ul>
 </div>

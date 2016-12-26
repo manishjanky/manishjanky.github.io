@@ -93,6 +93,10 @@ p{
     background-color:rgb(239, 233, 233);
    color:rgb(118, 114, 112);
 }
+
+.section .flow-text{
+    font-size: 1.25rem;
+}
 .col ul{
     padding-left:25px;
 
