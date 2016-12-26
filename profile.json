@@ -80,6 +80,14 @@
          "rating":7
       },
       {
+         "skill":"BootStrap",
+         "rating":6.5
+      },
+      {
+         "skill":"Materialize CSS",
+         "rating":6
+      },
+      {
          "skill":"jQuery",
          "rating":8
       },
