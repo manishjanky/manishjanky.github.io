@@ -1,4 +1,4 @@
-﻿<section class="col l8 m12 s12 section z-depth-2">
+<section class="col l8 m12 s12 section z-depth-2">
     <div class="row col l12 m12 s12 card horizontal " ng-if="user.summary">
         <div class="card-content">
             <div class="col l3 m3 s3 ">
@@ -103,3 +103,14 @@
         </div>
     </div>
 </section>
+<div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large" ng-class="{'blue':$parent.styleSheet=='blue','red':$parent.styleSheet=='red','green':$parent.styleSheet=='green','grey':$parent.styleSheet=='grey'}">
+        <i class="large fa fa-snowflake-o"></i>
+    </a>
+    <ul>
+        <li title="Red"><a class="btn-floating red" ng-click="$parent.updateStyle('red')"><i class="fa fa-snowflake-o"></i></a></li>
+        <li title="Green"><a class="btn-floating green" ng-click="$parent.updateStyle('green')"><i class="fa fa-snowflake-o"></i></a></li>
+        <li title="Blue"><a class="btn-floating blue" ng-click="$parent.updateStyle('blue')"><i class="fa fa-snowflake-o"></i></a></li>
+        <li title="Grey"><a class="btn-floating grey" ng-click="$parent.updateStyle('grey')"><i class="fa fa-snowflake-o"></i></a></li>
+    </ul>
+</div>
