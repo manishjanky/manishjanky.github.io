@@ -115,5 +115,11 @@
          "provider":"Microsoft",
          "name":"70-461 Querying Microsoft SQL Server 2012/2014"
       }
+   ],
+   "socialProfiles":[
+		"facebook":"http://facebook.com/manishjanky",
+		"googlePlus":"https://plus.google.com/107936389381835582160",
+		"twitter":""
+
    ]
 }
