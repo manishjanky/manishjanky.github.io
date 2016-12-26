@@ -84,6 +84,14 @@
          "rating":6.5
       },
       {
+         "skill":"SQL",
+         "rating":7.5
+      },
+      {
+         "skill":"PL/SQL",
+         "rating":7.5
+      },
+      {
          "skill":"MSSQL",
          "rating":7.5
       },
