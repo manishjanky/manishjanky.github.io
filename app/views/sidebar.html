@@ -1,14 +1,14 @@
-<aside class=" col l4 m12 s12 sidebar">
-        <ul id="slide-out" class="side-nav">
-            <li>Projects</li>
-            <li>Cover Letter</li>
-            <li><div class="divider"></div></li>
-            <li><a class="subheader">Subheader</a></li>
-            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-        </ul>
-  
+<aside class=" col l4 m12 s12 sidebar z-depth-3">
+    <ul id="slide-out" class="side-nav">
+        <li>Projects</li>
+        <li>Cover Letter</li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+
     <div class="row heading ">
-        <a href="" data-activates="slide-out" class="btn-floating button-collapse navIcon text-center"><span class="fa fa-bars text-center"></span></a>
+        <a href="" data-activates="slide-out" class="btn-floating  button-collapse navIcon text-center" ng-class="{'blue':$parent.styleSheet=='blue','red':$parent.styleSheet=='red','grey':$parent.styleSheet=='grey','green':$parent.styleSheet=='green'}"><span class="fa fa-bars text-center"></span></a>
         <div class="image">
             <a href="#/index.html">
                 <img src="https://lh5.googleusercontent.com/-zZmk5Oe6Hm8/AAAAAAAAAAI/AAAAAAAAAHg/PgDZ_telmuE/photo.jpg" err-src="images/ManishKumar.jpg" />
@@ -83,9 +83,9 @@
             </div>
         </div>
     </div>
-    
 
-    <div class="row col l12 m12 s12" >
+
+    <div class="row col l12 m12 s12">
         <a href="http://stackoverflow.com/users/4948483/manish">
             <img src="http://stackoverflow.com/users/flair/4948483.png?theme=clean" width="208" height="58" alt="profile for Manish at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Manish at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
         </a>
@@ -108,4 +108,3 @@
     //create the sidebar navigation
     $(".button-collapse").sideNav();
 </script>
-
