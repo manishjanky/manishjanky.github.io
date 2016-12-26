@@ -16,9 +16,13 @@ manish.config(['$routeProvider', '$locationProvider', function ($routeProvider, 
 manish.service('profileService', function ($http) {
     this.userProfile = null;
     this.getUserProfile = function () {
-        return $http.get("/profile.json");
+        if (userProfile != null) {
+            return userProfile;
+        } else {
+            return $http.get("/profile.json");
+        }
+       
     }
-    
 })
 manish.directive('errSrc', function () {
     return {
