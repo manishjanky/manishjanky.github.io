@@ -84,22 +84,22 @@
         </a>
     </div>
     <div class="row col l12 m12 s12 socialLinks">
-        <div class="col l3 m3 s3" title="Facebook" ng-if="user.socialProfiles.facebook">
+        <div class="col l4 m4 s4" title="Facebook" ng-if="user.socialProfiles.facebook">
             <a ng-href="{{user.socialProfiles.facebook}}" target="_blank"><span class="fa fa-3x fa-facebook-square"></span></a>
         </div>
-        <div class="col l3 m3 s3" title="Google Plus" ng-if="user.socialProfiles.googlePlus">
+        <div class="col l4 m4 s4" title="Google Plus" ng-if="user.socialProfiles.googlePlus">
             <a ng-href="{{user.socialProfiles.googlePlus}}" target="_blank"><span class="fa fa-3x fa-google-plus-square"></span></a>
         </div>
-        <div class="col l3 m3 s3" title="Twitter" ng-if="user.socialProfiles.twitter">
+        <div class="col l4 m4 s4" title="Twitter" ng-if="user.socialProfiles.twitter">
             
         </div>
-        <div class="col l3 m3 s3" title="LinkedIn" ng-if="user.socialProfiles.linkedin">
+        <div class="col l4 m4 s4" title="LinkedIn" ng-if="user.socialProfiles.linkedin">
             <a ng-href="{{user.socialProfiles.linkedin}}" target="_blank"><span class="fa fa-3x fa-linkedin-square"></span></a>
         </div>
         
     </div>
-    <div class="row col l12 m12 s12 " title="Download Resume" >
-            <a href="https://manishjanky.github.io/Downloads/Manish_Resume.docx" download="Resume" class="btn"><span class="fa fa-3x fa-download"></span> Download Resume</a>
+    <div class="row col l12 m12 s12 text-center" title="Download Resume" >
+            <a href="https://manishjanky.github.io/Downloads/Manish_Resume.docx" download="Manish_Resume" class="btn" ng-class="$parent.styleSheet"><span class="fa fa-3x fa-download"></span> Download Resume</a>
     </div>
 
 </aside>
