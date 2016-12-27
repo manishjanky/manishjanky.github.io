@@ -1,6 +1,6 @@
 {
    "name":"Manish Kumar",
-   "designation":"Front End Developer",
+   "designation":"Front End/UI & UX Developer",
    "aboutMe":"I'm a UI Designer/Front End Developer. A Microsoft Certified Specialist in Programming in HTML5 with JavaScript and CSS3. I enjoy taking complex problems and turn them in elegant User Experience design.",
    "contactDetails":{
       "contactNumber":"+91-8899503807",
@@ -40,9 +40,10 @@
    ],
    "summary":[
       "Microsoft Certified Professional and Microsoft Certified Specialist (Programming in HTML5 with JavaScript & CSS3).",
-      "2.5 years of extensive hands-on experience in web development.",
+      "2.5+ years of extensive hands-on experience in web development.",
+      "Possesses working experience on various technologies such as ASP.NET, JavaScript, AngularJS, HTML5, CSS, Bootstrap, jQuery, Ajax, ASP.NET Web Services.",
       "Experienced team player with excellent communication, interpersonal skills, and ability to work independently.",
-      "Leading a team of 4 members for last 1.5 years."
+      "Leading a team of 4 members for last 1.5+ years."
    ],
    "experience":[
       {
@@ -127,7 +128,8 @@
    "socialProfiles":{
 		"facebook":"http://facebook.com/manishjanky",
 		"googlePlus":"https://plus.google.com/107936389381835582160",
-		"twitter":""
+		"twitter":"",
+        "linkedin":"https://in.linkedin.com/in/manishjanky"
    },
    "projects":[
        {

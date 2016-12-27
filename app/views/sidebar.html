@@ -85,17 +85,23 @@
     </div>
     <div class="row col l12 m12 s12 socialLinks">
         <div class="col l3 m3 s3" title="Facebook" ng-if="user.socialProfiles.facebook">
-            <a href="http://facebook.com/manishjanky" target="_blank"><span class="fa fa-3x fa-facebook-square"></span></a>
+            <a ng-href="{{user.socialProfiles.facebook}}" target="_blank"><span class="fa fa-3x fa-facebook-square"></span></a>
         </div>
         <div class="col l3 m3 s3" title="Google Plus" ng-if="user.socialProfiles.googlePlus">
-            <a href="https://plus.google.com/107936389381835582160" target="_blank"><span class="fa fa-3x fa-google-plus-square"></span></a>
+            <a ng-href="{{user.socialProfiles.googlePlus}}" target="_blank"><span class="fa fa-3x fa-google-plus-square"></span></a>
         </div>
         <div class="col l3 m3 s3" title="Twitter" ng-if="user.socialProfiles.twitter">
-            <a href="http://stackoverflow.com/users/4948483/manish">
-                <img src="http://stackoverflow.com/users/flair/4948483.png?theme=clean" width="208" height="58" alt="profile for Manish at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Manish at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
-            </a>
+            
         </div>
+        <div class="col l3 m3 s3" title="LinkedIn" ng-if="user.socialProfiles.linkedin">
+            <a ng-href="{{user.socialProfiles.linkedin}}" target="_blank"><span class="fa fa-3x fa-linkedin-square"></span></a>
+        </div>
+        
     </div>
+    <div class="row col l12 m12 s12 " title="Download Resume" >
+            <a href="https://manishjanky.github.io/Downloads/Manish_Resume.docx" download="Resume" class="btn"><span class="fa fa-3x fa-download"></span> Download Resume</a>
+    </div>
+
 </aside>
 <!--Slide In Navigation Menu-->
 <ul id="slide-out" class="side-nav collection" ng-class="$parent.styleSheet">
