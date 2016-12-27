@@ -3,24 +3,32 @@ var manish = angular.module("manish", ['ngRoute']);
 manish.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider.
       when('/index.html', {
-          title: 'Welcome',
+          title: 'Manish Kumar',
           templateUrl: 'app/views/home.html',
           controller: 'homeController',
       }).when('/', {
-          title: 'Welcome',
+          title: 'Manish Kumar',
           templateUrl: 'app/views/home.html',
           controller: 'homeController',
       }).when('/projects', {
-          title: 'Welcome',
+          title: 'Projects',
           templateUrl: 'app/views/projects.html',
           controller: 'projectsController',
       }).when('/coverLetter', {
-          title: 'Welcome',
+          title: 'Cover Letter',
           templateUrl: 'app/views/coverLetter.html',
           controller: 'homeController',
       })      
 }]);
 
+manish.run(['$rootScope', '$route', function ($rootScope, $route) {
+    $rootScope.$on('$routeChangeSuccess', function () {
+        //update the title of the page
+        document.title = $route.current.title;
+        //remove the div as it stays even after view changes as being appended to documnet ouside the ng-view div
+        $('#sidenav-overlay').remove();
+    });
+}]);
 manish.service('profileService', function ($http) {
    this.userProfile = null;
     this.getUserProfile = function () {
