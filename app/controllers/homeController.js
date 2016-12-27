@@ -1,5 +1,5 @@
 var homeController = manish.controller("homeController", function ($scope, $http, $location, $rootScope, profileService) {
-    $scope.Username = 'manishjanky';
+    $scope.date = new Date();
     $scope.userProfile = function () {
         if (profileService.userProfile != null) {
             $scope.user = profileService.userProfile;
@@ -12,7 +12,6 @@ var homeController = manish.controller("homeController", function ($scope, $http
                 //error occured
             })
         }
-       
     }
     $scope.userProfile();
 });

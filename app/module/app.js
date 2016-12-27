@@ -17,7 +17,7 @@ manish.config(['$routeProvider', '$locationProvider', function ($routeProvider, 
       }).when('/coverLetter', {
           title: 'Welcome',
           templateUrl: 'app/views/coverLetter.html',
-          controller: 'coverLetterController',
+          controller: 'homeController',
       })      
 }]);
 

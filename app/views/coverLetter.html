@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row fullHeight">
+        <ng-include src=" 'app/views/sidebar.html'"></ng-include>
+        <section class="col l8 m12 s12 section z-depth-2">
+            <div class="row col l12 m12 s12 card ">
+                <p>{{date|date:shortDate}}</p>
+                <p>{{user.coverLetter.greeting}}</p>
+                <p>{{user.coverLetter.opening}}</p>
+                <p>{{user.coverLetter.start}}</p>
+                <p>{{user.coverLetter.skills}}</p>
+                <p>{{user.coverLetter.close}}</p>
+                <p>Sincerely</p>
+                <p>{{user.name}}</p>
+            </div>
+        </section>
+        <ng-include src=" 'app/views/themes.html'"></ng-include>
+    </div>
+</div>
