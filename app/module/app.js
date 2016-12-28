@@ -25,8 +25,8 @@ manish.run(['$rootScope', '$route', function ($rootScope, $route) {
     $rootScope.$on('$routeChangeSuccess', function () {
         //update the title of the page
         document.title = $route.current.title;
-        //remove the div as it stays even after view changes as being appended to documnet ouside the ng-view div
-        $('#sidenav-overlay').remove();
+        //hide the sidebar nav div as it stays even after view changes as being appended to documnet ouside the ng-view div
+        $('.button-collapse').sideNav('hide');
     });
 }]);
 manish.service('profileService', function ($http) {
