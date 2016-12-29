@@ -18,7 +18,11 @@ manish.config(['$routeProvider', '$locationProvider', function ($routeProvider, 
           title: 'Cover Letter',
           templateUrl: 'app/views/coverLetter.html',
           controller: 'homeController',
-      })      
+      }).when('/accolades', {
+          title: 'Accolades',
+          templateUrl: 'app/views/accolades.html',
+          controller: 'homeController',
+      })       
 }]);
 
 manish.run(['$rootScope', '$route', function ($rootScope, $route) {

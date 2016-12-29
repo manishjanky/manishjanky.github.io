@@ -163,5 +163,23 @@
        "start":"Since 2014, I have served as a Software Engineer/Web Developer for Infosys Ltd., where I have been repeatedly recognized for developing quality solutions for complex real world problems. I am responsible for full lifecycle development of software/application, from initial requirement gathering to design, coding, testing, documentation and implementation.",
        "skills":"Known for excellent problem solving skills and time management. I have participated in proposals and presentations that have helped grab various projects. I also excel in merging business and user needs into high-quality solutions while keeping within delivery timeline and  constraints. My technical expertise includes cross-platform proficiency (Windows, Unix, Linux). Fluency in various web technologies (including  HTML5, CSS, JavaScript, AngularJS, jQuery, ASP.NET and SQL); and good knowledge of developer applications, tools, methodologies and best practices (including OOD, client/server architecture and self-test automation).",
        "close":"As mentioned, I believe that my years of experience designing computer software, problem solving skills and my strong educational background can be an asset to your organization. I  would appreciate it if you would keep me in mind for future openings. Thank you for going through my profile. I look forward to speak with you. Please contact at (+91) 8899-503807 or manishjanky@gmail.com if you have any questions."
-   }	
+   },
+   "accolades":[
+       {
+           "image":"mcpc.png",
+           "title":"Microsoft Certified Professional Certificate",
+           "description":"Microsoft Certified Professional Certificate"
+       },
+       {
+           "image":"specialist.png",
+           "title":"Microsoft Certified Specialist Certificate",
+           "description":"Microsoft Certified Specialist in Programming in HTML5 with Javascript and CSS3."
+       },
+       {
+           "image":"badge.png",
+           "title":"MVA Know it. Prove it. Web Development Learning Challenge Badge",
+           "description":"This badge proves that you have conquered the Web Development Learning Challenge. You have added the MEAN stack to your developer’s toolbox and have skilled up on MongoDB, Express, Angular, and Node.js.",
+           "link":"https://api.badgr.io/share/badge/2e3fbeeb-c5c4-4e88-807f-f64a5fc1ad1b"
+       }
+   ]	
 }
