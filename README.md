@@ -9,5 +9,5 @@ Found a bug or an issue with this? [Open a new issue](https://github.com/manishj
 
 ## Getting Started
 
-If you need a similar portfolio for yourself:
+If you need a similar portfolio for yourself follow the below steps::
 * In Progress Coming Soon..
