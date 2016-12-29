@@ -84,8 +84,8 @@ p{
 }
 .title{
     position:absolute;
-    bottom:50px;
-    color:rebeccapurple
+    bottom: 0;
+    color: darkblue;
 }
 .socialLinks a{
     color:white;
