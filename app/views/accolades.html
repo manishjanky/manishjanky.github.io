@@ -12,7 +12,7 @@
                 <div class="card-reveal" ng-if="accolade.description">
                     <span class="card-title grey-text text-darken-4">{{accolade.name}}<i class="fa fa-close right"></i></span>
                     <p class="flow-text">{{accolade.description}}</p>
-                    <a ng-href="{{accolade.link}}" class="btn" ng-class="$parent.styleSheet" target="_blank">Verify</a>
+                    <a ng-href="{{accolade.link}}" class="btn" ng-class="$parent.styleSheet" target="_blank" ng-if="accolade.link">Verify</a>
                 </div>
             </div>
         </section>
