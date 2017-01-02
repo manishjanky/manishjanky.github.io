@@ -1,0 +1,444 @@
+﻿<div class="container">
+    <div class="row fullHeight">
+        <div class="row ">
+            <div class="row col s2 z-depth-2" style="padding:0px;margin:0px;">
+                <ul class="col s12 text-center createTabs">
+                    <li class="btn col s12 waves-effect" ng-click="tab='getProfile'" ng-class="$parent.styleSheet">Instructions</li>
+                    <li class="btn col s12 waves-effect" ng-click="tab='personal'" ng-class="$parent.styleSheet">Personal</li>
+                    <li class="btn col s12 waves-effect" ng-click="tab='summary'" ng-class="$parent.styleSheet">Experience Summary</li>
+                    <li class="btn col s12 waves-effect" ng-click="tab='skills'" ng-class="$parent.styleSheet">Skills</li>
+                    <li class="btn col s12 waves-effect" ng-click="tab='experience'" ng-class="$parent.styleSheet">Work Experience</li>
+                    <li class="btn col s12 waves-effect" ng-click="tab='certificates'" ng-class="$parent.styleSheet">Certificates</li>
+                    <li class="btn col s12 waves-effect" ng-click="tab='education'" ng-class="$parent.styleSheet">Education</li>
+                    <li class="btn col s12 waves-effect" ng-click="tab='coverLetter'" ng-class="$parent.styleSheet">Cover Letter</li>
+                    <li class="btn col s12 waves-effect" ng-click="tab='accolades'" ng-class="$parent.styleSheet">Accolades</li>
+                    <li class="btn col s12 waves-effect" ng-click="tab='social'" ng-class="$parent.styleSheet">Social</li>
+
+                </ul>
+            </div>
+            <div class="col s10 z-depth-2">
+                <form>
+                    <div ng-show="tab=='personal'" class="col s12 card">
+                        <div class="row">
+                            <div class="col s12">
+                                <fieldset>
+                                    <legend>
+                                        <h5>Personal Details</h5>
+                                    </legend>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="text" class="validate" ng-model="user.name">
+                                            <label>Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <textarea id="aboutMe" class="validate materialize-textarea" ng-model="user.aboutMe"></textarea>
+                                            <label for="aboutMe">About Me</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <input type="email" class="validate" ng-model="user.contactDetails.email">
+                                            <label>Email</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input type="email" class="validate" ng-model="user.contactDetails.alertnateEmail">
+                                            <label>Alternate Email</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="text" class="validate" ng-model="user.designation">
+                                            <label>Designation/Title</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <input type="tel" class="validate" ng-model="user.contactDetails.contactNumber">
+                                            <label>Mobile Number</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input type="tel" class="validate" ng-model="user.contactDetails.alternateNumber">
+                                            <label>Alternate Number</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <input type="text" class="validate" ng-model="user.contactDetails.address.street">
+                                            <label>Address - Street</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input type="tel" class="validate" ng-model="user.contactDetails.address.society">
+                                            <label>Address - Society</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s4">
+                                            <input type="text" class="validate" ng-model="user.contactDetails.address.city">
+                                            <label>Address - City</label>
+                                        </div>
+                                        <div class="input-field col s4">
+                                            <input type="text" class="validate" ng-model="user.contactDetails.address.state">
+                                            <label>Address - State</label>
+                                        </div>
+                                        <div class="input-field col s4">
+                                            <input type="tel" class="validate" ng-model="user.contactDetails.address.pin">
+                                            <label>Address - ZIP</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="tab=='summary'" class="col s12 card">
+                        <div class="row">
+                            <div class="col s12">
+                                <fieldset>
+                                    <legend>
+                                        <h5>Experience Summary</h5>
+                                    </legend>
+                                    <div class="row col s12" ng-repeat="sum in summary track by $index">
+                                        <div class="input-field col s12">
+                                            <input type="text" ng-model="sum" />
+                                            <label>Experience Summary - {{$index +1}}</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 text-center">
+                                        <a class=" waves-effect btn" ng-click="addItems('summary')" ng-class="$parent.styleSheet"><span class="fa fa-plus-square"></span> Add More</a>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div ng-show="tab=='skills'" class="col s12 card">
+                        <div class="row">
+                            <div class="col s12">
+                                <fieldset>
+                                    <legend>
+                                        <h5>Skills</h5>
+                                    </legend>
+                                    <div class="row col s12">
+                                        <div class="row" ng-repeat="skill in skills">
+                                            <div class="input-field col s6">
+                                                <input type="text" ng-model="skill.skill" />
+                                                <label>Skill - {{$index + 1}}</label>
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <input type="number" ng-model="skill.rating" />
+                                                <label>Rating</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col s12 text-center">
+                                        <a class=" waves-effect btn" ng-click="addItems('skills')" ng-class="$parent.styleSheet"><span class="fa fa-plus-square"></span> Add More</a>
+                                    </div>
+
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div ng-show="tab=='experience'" class="col s12 card">
+                        <div class="row">
+                            <div class="col s12">
+                                <fieldset>
+                                    <legend>
+                                        <h5>Work Experience</h5>
+                                    </legend>
+                                    <div class="row col s12" ng-repeat="exp in experience">
+                                        <div class=" row col s12">
+                                            <div class="input-field col s4">
+                                                <input type="text" ng-model="exp.name" />
+                                                <label>Project Name</label>
+                                            </div>
+                                            <div class="input-field col s4">
+                                                <input type="text" ng-model="exp.name" />
+                                                <label>Organization</label>
+                                            </div>
+                                            <div class="input-field col s4">
+                                                <input type="text" ng-model="exp.name" />
+                                                <label>Designation</label>
+                                            </div>
+                                        </div>
+                                        <div class=" row col s12">
+                                            <div class="input-field col s4">
+                                                <input type="text" ng-model="exp.name" />
+                                                <label>Start Date</label>
+                                            </div>
+                                            <div class="input-field col s4">
+                                                <input type="text" ng-model="exp.name" />
+                                                <label>End Date</label>
+                                            </div>
+                                            <div class="input-field col s4">
+                                                <input type="text" ng-model="exp.name" />
+                                                <label>Client</label>
+                                            </div>
+                                        </div>
+                                        <div class="row col s12">
+                                            <div class="input-field col s12">
+                                                <input type="text" class="validate" ng-model="exp.technologies">
+                                                <label>Technologies Used</label>
+                                            </div>
+                                        </div>
+                                        <div class=" row col s12">
+                                            <div class="input-field col s12">
+                                                <textarea class="materialize-textarea" ng-model="exp.name"></textarea>
+                                                <label>Description</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 text-center">
+                                        <a class=" waves-effect btn" ng-click="addItems('experience')" ng-class="$parent.styleSheet"><span class="fa fa-plus-square"></span> Add More</a>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div ng-show="tab=='certificates'" class="col s12 card">
+                        <div class="row">
+                            <div class="col s12">
+                                <fieldset>
+                                    <legend>
+                                        <h5>Certifications</h5>
+                                    </legend>
+                                    <div class=" col s12 row" ng-repeat="cert in certifications">
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input type="text" class="validate" ng-model="cert.provider">
+                                                <label>Provider</label>
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <input type="text" class="validate" ng-model="cert.title">
+                                                <label>Title</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input type="text" class="validate" ng-model="edu.name">
+                                                <label>Name</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col s12 text-center">
+                                        <a class=" waves-effect btn" ng-click="addItems('certifications')" ng-class="$parent.styleSheet"><span class="fa fa-plus-square"></span> Add More</a>
+                                    </div>
+                                </fieldset>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="tab=='education'" class="col s12 card">
+                        <div class="row">
+                            <div class="col s12">
+                                <fieldset>
+                                    <legend>
+                                        <h5>Education Details</h5>
+                                    </legend>
+                                    <div class=" col s12 row" ng-repeat="edu in education">
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input type="text" class="validate" ng-model="edu.qualification">
+                                                <label>Qualification</label>
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <input type="text" class="validate" ng-model="edu.stream">
+                                                <label>Stream</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input type="number" class="validate" ng-model="edu.marks">
+                                                <label>Marks</label>
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <input type="number" class="validate" ng-model="edu.pasingYear">
+                                                <label>Passing Year</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input type="text" class="validate" ng-model="edu.institute">
+                                                <label>Institute/University</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col s12 text-center">
+                                        <a class=" waves-effect btn" ng-click="addItems('education')" ng-class="$parent.styleSheet"><span class="fa fa-plus-square"></span> Add More</a>
+                                    </div>
+                                </fieldset>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div ng-show="tab=='coverLetter'" class="col s12 card">
+                        <div class="row">
+                            <div class="col s12">
+                                <fieldset>
+                                    <legend>
+                                        <h5>Cover Letter</h5>
+                                    </legend>
+                                    <div class=" col s12 row">
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input type="text" class="validate" ng-model="coverLetter.greeting">
+                                                <label>Cover Letter Greetings</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea class="validate materialize-textarea" ng-model="coverLetter.opening"></textarea>
+                                                <label>Cover Letter Opening</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea class="validate materialize-textarea" ng-model="coverLetter.start"></textarea>
+                                                <label>Cover Letter Start</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea class="validate materialize-textarea" ng-model="coverLetter.skills"></textarea>
+                                                <label>Skills Description</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea class="validate materialize-textarea" ng-model="coverLetter.close"></textarea>
+                                                <label>Cover Letter Closing</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="tab=='accolades'" class="col s12 card">
+                        <div class="row">
+                            <div class="col s12">
+                                <fieldset>
+                                    <legend>
+                                        <h5>Accolades</h5>
+                                    </legend>
+                                    <div class=" col s12 row" ng-repeat="accolade in accolades">
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input type="text" class="validate" ng-model="accolade.title">
+                                                <label>Title</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input type="text" class="validate" ng-model="accolade.image">
+                                                <label>Image Name</label>
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <input type="text" class="validate" ng-model="accolade.title">
+                                                <label>Link - If Any</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea class="validate materialize-textarea" ng-model="accolade.description"></textarea>
+                                                <label>Description</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 text-center">
+                                        <a class=" waves-effect btn" ng-click="addItems('accolades')" ng-class="$parent.styleSheet"><span class="fa fa-plus-square"></span> Add More</a>
+                                    </div>
+                                </fieldset>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="tab=='social'" class="row col s12 card">
+                        <div class="row">
+                            <div class="col s12" >
+                                <fieldset>
+                                    <legend><h5>Social Profiles</h5></legend>
+                                    <div class="row">
+                                        <div class=" col s12">
+                                            <div class="input-field col s12">
+                                                <input type="url" class="validate" ng-model="socialProfiles.facebook">
+                                                <label>Facebook</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class=" col s12">
+                                            <div class="input-field col s12">
+                                                <input type="url" class="validate" ng-model="socialProfiles.googlePlus">
+                                                <label>Google+</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class=" col s12">
+                                            <div class="input-field col s12">
+                                                <input type="url" class="validate" ng-model="socialProfiles.linkedin">
+                                                <label>LinkedIn</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class=" col s12">
+                                            <div class="input-field col s12">
+                                                <input class="validate" type="url" ng-model="socialProfiles.twitter">
+                                                <label>Twitter</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                         
+                        </div>
+
+
+                    </div>
+                    <div ng-show="tab=='getProfile'" class="row col s12 card instructions">
+                        <div class="row">
+
+                            <div class=" col s12">
+                                <p>
+                                    <h5>Get A Profile of Your Own.</h5>
+                                    <ul>
+                                        <li ng-repeat="instruction in instructions">{{instruction}}</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="col s12 text-center">
+                                <a class=" waves-effect btn" ng-class="$parent.styleSheet"><span class="fa fa-download"></span> Download Profile</a>
+                                <a class="waves-effect btn" href="https://github.com/manishjanky/manishjanky.github.io" target="_blank" ng-class="$parent.styleSheet"><span class="fa fa-github"></span> Github Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+
+        <ng-include src=" 'app/views/themes.html'"></ng-include>
+
+    </div>
+    <!--Slide In Navigation Menu-->
+    <ul id="slide-out" class="side-nav collection" ng-class="$parent.styleSheet">
+        <li class="collection-item" ng-class="$parent.styleSheet"><a href="#/">Home</a></li>
+        <li class="collection-item" ng-class="$parent.styleSheet"><a href="#/projects">Projects</a></li>
+        <li class="collection-item" ng-class="$parent.styleSheet"><a href="#/accolades">Accolades</a></li>
+        <li class="collection-item" ng-class="$parent.styleSheet"><a href="#/coverLetter">Cover Letter</a></li>
+        <li class="collection-item" ng-class="$parent.styleSheet"><a href="#/createProfile">Get Profile</a></li>
+    </ul>
+</div>

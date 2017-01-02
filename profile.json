@@ -45,24 +45,6 @@
       "Experienced team player with excellent communication, interpersonal skills, and ability to work independently.",
       "Leading a team of 4 members for last 1.5+ years."
    ],
-   "experience":[
-      {
-         "name":"Quality Dashboard",
-         "description":"This is a web based system for monitoring the quality of various layers of an application.It provides all the information required by the quality team in a single nutshell. This reduced the extensive mail chains for getting the complete information. Was also awarded as the best POC in AutoThon (A Infosys wide event).",
-         "startDate":"Nov 2014",
-         "endDate":"Sep 2015",
-         "designation":"System Engineer",
-         "organization":"Infosys"
-      },
-      {
-         "name":"StoneSoup",
-         "description":"This is a web based application that allows users to add, edit and publish engineering data. It provides Customizable Configurations to different groups. Allows saving custom configuration locally/on the server. Data generated from Stone Soup helps in design validations and automate repetitive design engineering activities.",
-         "startDate":"Oct 2015",
-         "endDate":"",
-         "organization":"Infosys",
-         "current":true
-      }
-   ],
    "skills":[
       {
          "skill":"JavaScript",
@@ -129,7 +111,8 @@
 		"facebook":"http://facebook.com/manishjanky",
 		"googlePlus":"https://plus.google.com/107936389381835582160",
 		"twitter":"",
-        "linkedin":"https://in.linkedin.com/in/manishjanky"
+        "linkedin":"https://in.linkedin.com/in/manishjanky",
+        "stackOverFlow":"http://stackoverflow.com/users/4948483/manish"
    },
    "projects":[
        {
@@ -138,7 +121,9 @@
            "technologies":"JavaScript, HTML5, CSS, MSSQL, WCF, FabricJS",
            "client":"Boeing",
 		   "startDate":"Oct 2015",
-           "endDate":""
+           "endDate":"",
+           "designation":"System Engineer",
+           "organization":"Infosys"
        },
        {
            "name":"Quality Dashboard",
@@ -146,7 +131,9 @@
            "technologies":"JavaScript, CSS, HTML5, BootStrap, MSSQL, ASP.NET Services",
            "client":"ABN Amro Bank",
 		   "startDate":"Nov 2014",
-           "endDate":"Sep 2015"
+           "endDate":"Sep 2015",
+            "designation":"System Engineer",
+            "organization":"Infosys"
        },
        {
            "name":"Skill Tracker",
@@ -154,7 +141,9 @@
            "technologies":"AngularJS, CSS, HTML5, JavaScript, BootStrap, MSSQL, ASP.NET Services",
            "client":"Infosys",
            "startDate":"Nov 2016",
-           "endDate":""
+           "endDate":"",
+            "designation":"System Engineer",
+            "organization":"Infosys"
        }
    ],
    "coverLetter":{

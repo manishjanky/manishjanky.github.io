@@ -5,7 +5,7 @@ var styleController = manish.controller("styleController", function ($scope, $ht
             //set and load the theme chosen by user using localstorage
             var sty = $window.localStorage.getItem('manish_styleSheet');
             if (angular.isUndefined(sty) || sty==null) {
-                $scope.styleSheet = 'blue';
+                $scope.styleSheet = 'default';
             } else {
                 $scope.styleSheet = sty;
             }

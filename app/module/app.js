@@ -11,18 +11,22 @@ manish.config(['$routeProvider', '$locationProvider', function ($routeProvider, 
           templateUrl: 'app/views/home.html',
           controller: 'homeController',
       }).when('/projects', {
-          title: 'Projects',
+          title: 'Manish - Projects',
           templateUrl: 'app/views/projects.html',
           controller: 'projectsController',
       }).when('/coverLetter', {
-          title: 'Cover Letter',
+          title: 'Manish - Cover Letter',
           templateUrl: 'app/views/coverLetter.html',
           controller: 'homeController',
       }).when('/accolades', {
-          title: 'Accolades',
+          title: 'Manish - Accolades',
           templateUrl: 'app/views/accolades.html',
           controller: 'homeController',
-      })       
+      }).when('/createProfile', {
+          title: 'Create Your Profile',
+          templateUrl: 'app/views/createProfile.html',
+          controller: 'createProfileController',
+      })
 }]);
 
 manish.run(['$rootScope', '$route', function ($rootScope, $route) {
