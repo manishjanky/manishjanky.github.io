@@ -135,6 +135,13 @@ section li:before {
   width: 1.3em; /* same as padding-left set on li */
 }
 
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
 @media screen and ( min-height: 650px ){
     .sidebar{
         min-height:100% !important;
