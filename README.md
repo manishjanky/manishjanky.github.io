@@ -10,7 +10,7 @@ Found a bug or an issue with this? [Open a new issue](https://github.com/manishj
 ## Getting Started
 
 If you need a similar portfolio for yourself follow the below steps:
-* [Visit](https://manishjanky.github.io/#/createProfile)
+* [Visit](https://manishjanky.github.io/#/createProfile) this page.
 * Fill in all your details properly.
 * The click Download Profile button. Which give you a profile.jon file.
 * Goto [Github Repository](https://github.com/manishjanky/manishjanky.github.io) and download as ZIP.
