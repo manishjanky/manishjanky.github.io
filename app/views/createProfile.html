@@ -8,11 +8,11 @@
             <div class="col s11 text-center">
                 <h3 class="text-center">Get A Profile of Your Own.</h3>
             </div>
-            
+
         </div>
         <div class="row row-eq-height">
-            
-            <div class="row col s2 z-depth-2" style="padding:0px;margin:0px;">
+
+            <div class="row col s2 z-depth-2 " style="padding:0px;margin:0px;">
                 <ul class="col s12 text-center createTabs">
                     <li class="btn col s12 waves-effect" ng-click="tab='getProfile'" ng-class="$parent.styleSheet">Instructions</li>
                     <li class="btn col s12 waves-effect" ng-click="tab='personal'" ng-class="$parent.styleSheet">Personal</li>
@@ -37,9 +37,13 @@
                                         <h5>Personal Details</h5>
                                     </legend>
                                     <div class="row">
-                                        <div class="input-field col s12">
+                                        <div class="input-field col s6">
                                             <input type="text" class="validate" ng-model="user.name">
                                             <label>Name</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input type="text" class="validate" ng-model="user.username" required>
+                                            <label data-error="Required">UserName</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -430,6 +434,14 @@
 
                             <div class=" col s12">
                                 <p>
+                                    <h4>Instructions For Filling Details.</h4>
+                                    
+                                    <ul>
+                                        <li ng-repeat="instruction in fillInstructions">{{instruction}}</li>
+                                    </ul>
+                                </p>
+                                <p>
+                                    <h4>Instructions For Hosting Portfolio.</h4>
                                     <ul>
                                         <li ng-repeat="instruction in instructions">{{instruction}}</li>
                                     </ul>

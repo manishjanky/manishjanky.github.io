@@ -7,9 +7,41 @@
     $scope.experience = [{}];
     $scope.certifications = [{}];
     $scope.accolades = [{}];
+    $scope.userProfile = function () {
+        if (profileService.userProfile != null) {
+            $scope.user = profileService.userProfile;
+        } else {
+            var promise = profileService.getUserProfile();
+            promise.then(function (response) {
+                $scope.user = response.data;
+                //redirect back to home page as this create profile page will be available from only this portfolio
+                if ($scope.user.username != "manishjanky") {
+                    $location.path("/");
+                }
+                profileService.userProfile = response.data;
+            }, function (response) {
+                //error occured
+            })
+        }
 
-
-    $scope.instructions = ['Fill in all the details that follow.', 'Once you are done with filling the details,  got to the instructions tab.', 'Under instructions tab click on the Download Profile button.', 'After you click Download a JOSN file will be downloaded. Save this file as profile.json.', 'Visit the Github link given below. There you will see a Clone or Download button.', 'Click on the Clone or Download button then click on  Download ZIP link.'];
+    }
+    $scope.fillInstructions = [
+        'Please refer this Portfolio to get an idea of what details to fill.',
+        'Please fill in all the applicable details properly.',
+        'Please give a proper Resume URL/Link preferably keep it on github i.e while hosting you profile with github pages keep Resume(in .docx format) in a folder in the repository and provide that URL.',
+        'Click on Add more button to add more items.',
+        "Please fill proper profile url's for social profiles.",
+        "For accolades Image Name field please provide a proper image name with extension and keep them with same name in images folder while hosting on github."
+    ];
+    $scope.instructions = ['Fill in all the details properly that follow.',
+        'The click Download Profile button. Which gives you a profile.json file.',
+        'Click Github Repository button what takes you to a github repository page and download it as ZIP.',
+        'Extract the downloaded contents.',
+        'Replace the profile.json file in the downloaded package with the one downloaded in the second step.',
+        'Replace the images in images folder according to the name as filled in by you. And also the profile picture with your own image.',
+        'Replace the Resume.docx file in the Dowloads folder with you own Resume.',
+        'You can host is using Github Pages.'
+    ];
     $scope.addItems = function (itemType) {
         if (itemType != 'summary') {
             $scope[itemType].push({});

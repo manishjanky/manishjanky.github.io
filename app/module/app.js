@@ -28,6 +28,10 @@ manish.config(['$routeProvider', '$locationProvider', '$compileProvider', functi
           title: 'Create Your Profile',
           templateUrl: 'app/views/createProfile.html',
           controller: 'createProfileController',
+      }).when('/credits', {
+          title: 'Credits',
+          templateUrl: 'app/views/credits.html',
+          controller: '',
       })
 }]);
 
