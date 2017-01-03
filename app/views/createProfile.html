@@ -1,6 +1,17 @@
-﻿<div class="container">
+﻿
+<div class="container">
     <div class="row fullHeight">
+        <div class="row z-depth-2 zeroMargin" style="padding:5px;">
+            <div class="col s1">
+                <a href="" data-activates="slide-out" class="btn-floating button-collapse text-center" ng-class="$parent.styleSheet"><span class="fa fa-bars text-center"></span></a>
+            </div>
+            <div class="col s11 text-center">
+                <h3 class="text-center">Get A Profile of Your Own.</h3>
+            </div>
+            
+        </div>
         <div class="row ">
+            
             <div class="row col s2 z-depth-2" style="padding:0px;margin:0px;">
                 <ul class="col s12 text-center createTabs">
                     <li class="btn col s12 waves-effect" ng-click="tab='getProfile'" ng-class="$parent.styleSheet">Instructions</li>
@@ -88,6 +99,12 @@
                                             <label>Address - ZIP</label>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input type="url" class="validate" ng-model="user.resumeLink">
+                                            <label>Resume URL/Link</label>
+                                        </div>
+                                    </div>
                                 </fieldset>
 
                             </div>
@@ -102,7 +119,7 @@
                                     </legend>
                                     <div class="row col s12" ng-repeat="sum in summary track by $index">
                                         <div class="input-field col s12">
-                                            <input type="text" ng-model="sum" />
+                                            <input type="text" ng-model="summary[$index]" class="validate" />
                                             <label>Experience Summary - {{$index +1}}</label>
                                         </div>
                                     </div>
@@ -158,25 +175,25 @@
                                                 <label>Project Name</label>
                                             </div>
                                             <div class="input-field col s4">
-                                                <input type="text" ng-model="exp.name" />
+                                                <input type="text" ng-model="exp.organization" />
                                                 <label>Organization</label>
                                             </div>
                                             <div class="input-field col s4">
-                                                <input type="text" ng-model="exp.name" />
+                                                <input type="text" ng-model="exp.designation" />
                                                 <label>Designation</label>
                                             </div>
                                         </div>
                                         <div class=" row col s12">
                                             <div class="input-field col s4">
-                                                <input type="text" ng-model="exp.name" />
+                                                <input type="text" ng-model="exp.startDate" />
                                                 <label>Start Date</label>
                                             </div>
                                             <div class="input-field col s4">
-                                                <input type="text" ng-model="exp.name" />
+                                                <input type="text" ng-model="exp.endDate" />
                                                 <label>End Date</label>
                                             </div>
                                             <div class="input-field col s4">
-                                                <input type="text" ng-model="exp.name" />
+                                                <input type="text" ng-model="exp.client" />
                                                 <label>Client</label>
                                             </div>
                                         </div>
@@ -188,7 +205,7 @@
                                         </div>
                                         <div class=" row col s12">
                                             <div class="input-field col s12">
-                                                <textarea class="materialize-textarea" ng-model="exp.name"></textarea>
+                                                <textarea class="materialize-textarea" ng-model="exp.description"></textarea>
                                                 <label>Description</label>
                                             </div>
                                         </div>
@@ -345,7 +362,7 @@
                                                 <label>Image Name</label>
                                             </div>
                                             <div class="input-field col s6">
-                                                <input type="text" class="validate" ng-model="accolade.title">
+                                                <input type="url" class="validate" ng-model="accolade.link">
                                                 <label>Link - If Any</label>
                                             </div>
                                         </div>
@@ -366,7 +383,7 @@
                     </div>
                     <div ng-show="tab=='social'" class="row col s12 card">
                         <div class="row">
-                            <div class="col s12" >
+                            <div class="col s12">
                                 <fieldset>
                                     <legend><h5>Social Profiles</h5></legend>
                                     <div class="row">
@@ -403,7 +420,7 @@
                                     </div>
                                 </fieldset>
                             </div>
-                         
+
                         </div>
 
 
@@ -413,20 +430,19 @@
 
                             <div class=" col s12">
                                 <p>
-                                    <h5>Get A Profile of Your Own.</h5>
                                     <ul>
                                         <li ng-repeat="instruction in instructions">{{instruction}}</li>
                                     </ul>
                                 </p>
                             </div>
                             <div class="col s12 text-center">
-                                <a class=" waves-effect btn" ng-class="$parent.styleSheet"><span class="fa fa-download"></span> Download Profile</a>
+                                <a class=" waves-effect btn" ng-click="downloadFile()" download="profile.json" ng-href="{{ url }}" ng-class="$parent.styleSheet"><span class="fa fa-download"></span> Download Profile</a>
                                 <a class="waves-effect btn" href="https://github.com/manishjanky/manishjanky.github.io" target="_blank" ng-class="$parent.styleSheet"><span class="fa fa-github"></span> Github Repository</a>
                             </div>
                         </div>
                     </div>
                 </form>
-               
+
             </div>
         </div>
 
@@ -441,4 +457,8 @@
         <li class="collection-item" ng-class="$parent.styleSheet"><a href="#/coverLetter">Cover Letter</a></li>
         <li class="collection-item" ng-class="$parent.styleSheet"><a href="#/createProfile">Get Profile</a></li>
     </ul>
+    <script>
+        //create the sidebar navigation
+        $(".button-collapse").sideNav();
+    </script>
 </div>

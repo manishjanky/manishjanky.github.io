@@ -1,6 +1,8 @@
 var manish = angular.module("manish", ['ngRoute']);
 
-manish.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider, $httpProvider) {
+manish.config(['$routeProvider', '$locationProvider', '$compileProvider', function ($routeProvider, $locationProvider,$compileProvider, $httpProvider) {
+
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|file|blob):/);
     $routeProvider.
       when('/index.html', {
           title: 'Manish Kumar',

@@ -1,7 +1,9 @@
 {
    "name":"Manish Kumar",
+   "username":"ManishKumar",
    "designation":"Front End/UI & UX Developer",
    "aboutMe":"I'm a UI Designer/Front End Developer. A Microsoft Certified Specialist in Programming in HTML5 with JavaScript and CSS3. I enjoy taking complex problems and turn them in elegant User Experience design.",
+   "resumeLink":"https://manishjanky.github.io/Downloads/Resume.docx",
    "contactDetails":{
       "contactNumber":"+91-8899503807",
       "alternateNumber":"+91-7906537527",
