@@ -1,5 +1,10 @@
 var projectsController = manish.controller("projectsController", function ($scope, $http, $location, $rootScope, $window,profileService) {
-    
+    $scope.topLayout = profileService.layoutStyle == "top" ? true : false;
+    $scope.layoutToggle = true;
+    $scope.togglelayout = function () {
+        $scope.topLayout = !$scope.topLayout;
+        profileService.setLayoutStyle($scope.topLayout);// = $scope.topLayout ? "top" : "side";
+    }
     $scope.userProfile = function () {
         if (profileService.userProfile != null) {
             $scope.user = profileService.userProfile;
@@ -12,7 +17,6 @@ var projectsController = manish.controller("projectsController", function ($scop
                 //error occured
             })
         }
-
     }
     $scope.userProfile();
 });

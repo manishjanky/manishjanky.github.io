@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row fullHeight">
-        <ng-include src=" 'app/views/sidebar.html'"></ng-include>
-        <section class="col l8 m12 s12 section z-depth-2">
+        <ng-include src=" 'app/views/layout.html'"></ng-include>
+        <section class="col m12 s12 section z-depth-2" ng-class="{'l8':!toplayout,'l12':topLayout}">
             <div class="row col l12 m12 s12 card ">
                 <p>{{date|date:shortDate}}</p>
                 <p>{{user.coverLetter.greeting}}</p>

@@ -1,4 +1,5 @@
 ﻿var createProfileController = manish.controller("createProfileController", function ($scope, $http, $location, $rootScope, profileService) {
+    $scope.layoutToggle = false;
     $scope.tab = 'getProfile';
     $scope.user = {};
     $scope.education = [{ }];
@@ -34,7 +35,8 @@
         "For accolades Image Name field please provide a proper image name with extension and keep them with same name in images folder while hosting on github."
     ];
     $scope.instructions = ['Fill in all the details properly that follow.',
-        'The click Download Profile button. Which gives you a profile.json file.',
+        'Go to Download tab and Submit.',
+        'The click Download Profile button Which gives you a profile.json file.',
         'Click Github Repository button what takes you to a github repository page and download it as ZIP.',
         'Extract the downloaded contents.',
         'Replace the profile.json file in the downloaded package with the one downloaded in the second step.',
@@ -48,9 +50,11 @@
         } else {
             $scope[itemType].push('');
         }
-        
     }
     
+    $scope.removeItems=function(itemType,index){
+            $scope[itemType].splice(index,1);
+    }
     $scope.downloadFile = function () {
         //this function downloads the profile.json
         $scope.user['education'] = $scope.education;

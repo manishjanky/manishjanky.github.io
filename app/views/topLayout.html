@@ -1,0 +1,111 @@
+﻿<div class="row col l12 m12 s12 sidebar z-depth-3" ng-if="topLayout">
+    <div class="heading col l4 s12">
+        <div class="fixed-action-btn horizontal click-to-toggle navIcon">
+            <a href="" class="btn-floating  text-center" ng-class="$parent.styleSheet"><span class="fa fa-bars text-center"></span></a>
+            <ul>
+                <li title="Home" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/"><i class="fa fa-home"></i></a></li>
+                <li title="Projects" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/projects"><i class="fa fa-briefcase"></i></a></li>
+                <li title="Accolades" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/accolades"><i class="fa fa-certificate"></i></a></li>
+                <li title="Cover Letter" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/coverLetter"><i class="fa fa-envelope-open-o"></i></a></li>
+                <li title="Get Own Profile" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/createProfile"><i class="fa fa-cloud-download"></i></a></li>
+                <li title="Credits" ng-if="user.username!='manishjanky'" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/credits"><i class="fa fa-thumbs-up"></i></a></li>
+            </ul>
+        </div>
+         <div class="image">
+                <a href="#/">
+                    <img src="images/profilePicture.jpg" err-src="http://www.iconsdb.com/icons/preview/caribbean-blue/businessman-xxl.png" />
+                </a>
+            </div>
+            <div class="col row l12 m12 s12">
+                <h5 class="text-center">{{user.name}}</h5>
+                <h6 class="text-center">{{user.designation}}</h6>
+            </div>
+        </div>
+
+    <div class="row col l8 s12">
+        <div class="col l12 m12 s12 ">
+            <div class="col l3 m3 s3">
+                <span class="fa fa-2x fa-user"></span>
+            </div>
+            <div class="col l9 m9 s9 info">
+                <p class="zeroMargin">
+                    {{user.aboutMe}}
+                </p>
+            </div>
+        </div>
+        <div class="col l12 m12 s12 ">
+            <div class="col l3 m3 s3">
+                <span class="fa fa-2x fa-phone"></span>
+            </div>
+            <div class="col l9 m9 s9 info">
+                <div>
+                    <p class="zeroMargin">
+                        Mobile:
+                        {{user.contactDetails.contactNumber}}
+                    </p>
+                </div>
+                <div ng-if="user.contactDetails.alternateNumber">
+                    <p class="zeroMargin">
+                        Alternate:
+                        {{user.contactDetails.alternateNumber}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col l12 m12 s12 ">
+            <div class="col l3 m3 s3">
+                <span class="fa fa-2x fa-envelope"></span>
+            </div>
+            <div class="col l9 m9 s9 info">
+                <div>
+                    <p class="zeroMargin">
+                        {{user.contactDetails.email}}
+                    </p>
+                </div>
+                <div ng-if="user.alternateEmail">
+                    <p class="zeroMargin">
+                        {{user.contactDetails.alternateEmail}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col l12 m12 s12 ">
+            <div class="col l3 m3 s3">
+                <span class="fa fa-2x fa-address-card"></span>
+            </div>
+            <div class="col l9 m9 s9 info">
+                <div>
+                    <p class="zeroMargin">
+                        {{user.contactDetails.address.street}}
+                        <br />
+                        {{user.contactDetails.address.society}}
+                        <br />
+                        {{user.contactDetails.address.city}}
+                        <br />
+                        {{user.contactDetails.address.state}} - {{user.contactDetails.address.pin}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row col l9 m9 s9 socialLinks right">
+            <div class="col l3 m3 s3" title="Facebook" ng-if="user.socialProfiles.facebook">
+                <a ng-href="{{user.socialProfiles.facebook}}" target="_blank"><span class="fa fa-3x fa-facebook-square"></span></a>
+            </div>
+            <div class="col l3 m3 s3" title="Google Plus" ng-if="user.socialProfiles.googlePlus">
+                <a ng-href="{{user.socialProfiles.googlePlus}}" target="_blank"><span class="fa fa-3x fa-google-plus-square"></span></a>
+            </div>
+            <div class="col l3 m3 s3" title="Twitter" ng-if="user.socialProfiles.twitter">
+                <a ng-href="{{user.socialProfiles.twitter}}" target="_blank"><span class="fa fa-3x fa-twitter-square"></span></a>
+            </div>
+            <div class="col l3 m3 s3" title="LinkedIn" ng-if="user.socialProfiles.linkedin">
+                <a ng-href="{{user.socialProfiles.linkedin}}" target="_blank"><span class="fa fa-3x fa-linkedin-square"></span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row col l12 m12 s12 text-center" title="Download Resume" ng-if="user.resumeLink">
+        <a ng-href="{{user.resumeLink}}" download="{{user.name}}_Resume" class="btn" ng-class="$parent.styleSheet"><span class="fa  fa-download"></span> Download Resume</a>
+    </div>
+
+
+</div>

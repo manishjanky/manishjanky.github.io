@@ -35,19 +35,39 @@ manish.config(['$routeProvider', '$locationProvider', '$compileProvider', functi
       })
 }]);
 
-manish.run(['$rootScope', '$route', function ($rootScope, $route) {
+manish.run(['$rootScope', '$route', '$window', 'profileService', function ($rootScope, $route, $window, profileService) {
     $rootScope.$on('$routeChangeSuccess', function () {
         //update the title of the page
         document.title = $route.current.title;
         //hide the sidebar nav div as it stays even after view changes as being appended to documnet ouside the ng-view div
         $('.button-collapse').sideNav('hide');
     });
+    if ($window.localStorage) {
+        var layout = $window.localStorage.getItem("manish_Layout");
+        if (layout == null) {
+            $window.localStorage.setItem("manish_Layout","top");
+            profileService.layoutStyle = "top";
+        } else {
+            profileService.layoutStyle = layout;
+            //$window.localStorage.setItem("manish_Layout", "side");
+        }
+    }
 }]);
-manish.service('profileService', function ($http) {
-   this.userProfile = null;
+manish.service('profileService', function ($http,$window) {
+    var self = this;
+    this.userProfile = null;
     this.getUserProfile = function () {
         //get the profile.json file
             return $http.get("/profile.json");
+    },
+    this.setLayoutStyle = function (toplayout) {
+        if (toplayout) {
+            $window.localStorage.setItem("manish_Layout", "top");
+            self.layoutStyle = "top";
+        } else {
+            $window.localStorage.setItem("manish_Layout", "side");
+            self.layoutStyle = "side";
+        }
     }
 })
 manish.directive('errSrc', function () {
