@@ -497,18 +497,18 @@
                                             <li ng-if="createProfile.['project'+($index+1)+'Technologies'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Technologies for Work Experiece Item {{($index+1)}} is required. </li>
                                             <li ng-if="createProfile.['project'+($index+1)+'Description'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Description for Work Experiece Item {{($index+1)}} is required. </li>
 
-                                            <li ng-if="createProfile.['certificate'+($index+1)+'Provider'].$error.required" ng-repeat="certi in certifications track by $index">*Certifications: Provider for Certification Item {{($index+1)}} is required. </li>
-                                            <li ng-if="createProfile.['certificate'+($index+1)+'Name'].$error.required" ng-repeat="certi in certifications track by $index">*Certifications: Name for Certification Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile['certificate'+($index+1)+'Provider'].$error.required" ng-repeat="certi in certifications track by $index">*Certifications: Provider for Certification Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile['certificate'+($index+1)+'Name'].$error.required" ng-repeat="certi in certifications track by $index">*Certifications: Name for Certification Item {{($index+1)}} is required. </li>
 
-                                            <li ng-if="createProfile.['education'+($index+1)+'Qualification'].$error.required" ng-repeat="ed in education track by $index">*Education: Qualification for Education Item {{($index+1)}} is required. </li>
-                                            <li ng-if="createProfile.['education'+($index+1)+'PassingYear'].$error.required" ng-repeat="ed in education track by $index">*Education: PassingYear for Education Item {{($index+1)}} is required. </li>
-                                            <li ng-if="createProfile.['education'+($index+1)+'Institute'].$error.required" ng-repeat="ed in education track by $index">*Education: Institute for Education Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile['education'+($index+1)+'Qualification'].$error.required" ng-repeat="ed in education track by $index">*Education: Qualification for Education Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile['education'+($index+1)+'PassingYear'].$error.required" ng-repeat="ed in education track by $index">*Education: PassingYear for Education Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile['education'+($index+1)+'Institute'].$error.required" ng-repeat="ed in education track by $index">*Education: Institute for Education Item {{($index+1)}} is required. </li>
 
                                             <li ng-if="createProfile.coverLetterOpening.$error.required" >*Cover Letter: Opening for Cover Letter is required. </li>
                                             <li ng-if="createProfile.coverLetterClose.$error.required">*Cover Letter: Closing for Cover Letter is required. </li>
 
-                                            <li ng-if="createProfile.['accolade'+($index+1)+'Title'].$error.required" ng-repeat="acc in accolades track by $index">*Accolades: Title for Accolades Item {{($index+1)}} is required.</li>
-                                            <li ng-if="createProfile.['accolade'+($index+1)+'Description'].$error.required" ng-repeat="acc in accolades track by $index">*Accolades: Description for Accolades Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile['accolade'+($index+1)+'Title'].$error.required" ng-repeat="acc in accolades track by $index">*Accolades: Title for Accolades Item {{($index+1)}} is required.</li>
+                                            <li ng-if="createProfile['accolade'+($index+1)+'Description'].$error.required" ng-repeat="acc in accolades track by $index">*Accolades: Description for Accolades Item {{($index+1)}} is required. </li>
 
                                         </ul>
                                     </p>
