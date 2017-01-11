@@ -203,11 +203,11 @@ section li:before {
 .switch span:first-child{
     position:absolute;
     top:-17px;
-    left:15px;
+   
 }
 .switch span:last-child{
     position:absolute;
-    left:15px;
+  
 }
 
 .navIcon.horizontal ul {
