@@ -95,6 +95,21 @@ p {
     z-index: 3;
 }
 
+aside .navIcon {
+    position: absolute;
+    top:0px;
+    left: 10px;
+    z-index: 3;
+}
+
+aside .fixed-action-btn.navIcon ul{
+    text-align:left;
+    position:absolute;
+    padding-left:0px;
+    top:70px;
+
+}
+
 .image {
     position: relative;
 }
@@ -181,7 +196,7 @@ section li:before {
     }
 
 .switch label input[type=checkbox]:checked + .lever:after {
-    top: 25px;
+    top: 26px;
     left: 2px;
      background-color: white; 
 }

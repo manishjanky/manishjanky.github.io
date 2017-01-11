@@ -11,16 +11,16 @@
                 <li title="Credits" ng-if="user.username!='manishjanky'" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/credits"><i class="fa fa-thumbs-up"></i></a></li>
             </ul>
         </div>
-         <div class="image">
-                <a href="#/">
-                    <img src="images/profilePicture.jpg" err-src="http://www.iconsdb.com/icons/preview/caribbean-blue/businessman-xxl.png" />
-                </a>
-            </div>
-            <div class="col row l12 m12 s12">
-                <h5 class="text-center">{{user.name}}</h5>
-                <h6 class="text-center">{{user.designation}}</h6>
-            </div>
+        <div class="image">
+            <a href="#/">
+                <img src="images/profilePicture.jpg" err-src="http://www.iconsdb.com/icons/preview/caribbean-blue/businessman-xxl.png" />
+            </a>
         </div>
+        <div class="col row l12 m12 s12">
+            <h5 class="text-center">{{user.name}}</h5>
+            <h6 class="text-center">{{user.designation}}</h6>
+        </div>
+    </div>
 
     <div class="row col l8 s12">
         <div class="col l12 m12 s12 ">
@@ -106,6 +106,4 @@
     <div class="row col l12 m12 s12 text-center" title="Download Resume" ng-if="user.resumeLink">
         <a ng-href="{{user.resumeLink}}" download="{{user.name}}_Resume" class="btn" ng-class="$parent.styleSheet"><span class="fa  fa-download"></span> Download Resume</a>
     </div>
-
-
 </div>

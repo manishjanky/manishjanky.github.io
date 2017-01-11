@@ -3,14 +3,14 @@
     <div class="row fullHeight">
         <div class="row z-depth-2 zeroMargin" ng-class="$parent.styleSheet" style="padding:5px;">
             <div class="col s1">
-                <div class="fixed-action-btn horizontal click-to-toggle navIcon" style="position:relative;top:1px;left:-20px;">
+                <div class="fixed-action-btn horizontal click-to-toggle navIcon" style="position:relative;top:1px;left:-20px;z-index:99;">
                     <a href="" class="btn-floating  text-center" ng-class="$parent.styleSheet"><span class="fa fa-bars text-center"></span></a>
                     <ul>
-                        <li title="Home" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/"><i class="fa fa-home"></i></a></li>
-                        <li title="Projects" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/projects"><i class="fa fa-briefcase"></i></a></li>
-                        <li title="Accolades" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/accolades"><i class="fa fa-certificate"></i></a></li>
-                        <li title="Cover Letter" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/coverLetter"><i class="fa fa-envelope-open-o"></i></a></li>
-                        <li title="Get Own Profile" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/createProfile"><i class="fa fa-cloud-download"></i></a></li>
+                        <li title="Home" class="btn-floating text-center z-depth-5" ng-class="$parent.styleSheet"><a href="#/"><i class="fa fa-home"></i></a></li>
+                        <li title="Projects" class="btn-floating text-center z-depth-5" ng-class="$parent.styleSheet"><a href="#/projects"><i class="fa fa-briefcase"></i></a></li>
+                        <li title="Accolades" class="btn-floating text-center z-depth-5" ng-class="$parent.styleSheet"><a href="#/accolades"><i class="fa fa-certificate"></i></a></li>
+                        <li title="Cover Letter" class="btn-floating text-center z-depth-5" ng-class="$parent.styleSheet"><a href="#/coverLetter"><i class="fa fa-envelope-open-o"></i></a></li>
+                        <li title="Get Own Profile" class="btn-floating text-center z-depth-5" ng-class="$parent.styleSheet"><a href="#/createProfile"><i class="fa fa-cloud-download"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -78,11 +78,11 @@
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s6">
-                                            <input type="tel" class="validate" name="contactNumber" ng-model="user.contactDetails.contactNumber" required>
+                                            <input type="tel" class="validate" ng-pattern="/^[0-9]+$/" name="contactNumber" ng-model="user.contactDetails.contactNumber" required>
                                             <label>Mobile Number*</label>
                                         </div>
                                         <div class="input-field col s6">
-                                            <input type="tel" class="validate" name="alternateNumber" ng-model="user.contactDetails.alternateNumber">
+                                            <input type="tel" class="validate" ng-pattern="/^[0-9]+$/" name="alternateNumber" ng-model="user.contactDetails.alternateNumber">
                                             <label>Alternate Number</label>
                                         </div>
                                     </div>
@@ -188,7 +188,7 @@
                                                     <label>Project Name</label>
                                                 </div>
                                                 <div class="input-field col s4">
-                                                    <input type="text" ng-model="exp.organization" name="project{{$index+1}}Organization" />
+                                                    <input type="text" ng-model="exp.organization" required name="project{{$index+1}}Organization" />
                                                     <label>Organization</label>
                                                 </div>
                                                 <div class="input-field col s4">
@@ -212,13 +212,13 @@
                                             </div>
                                             <div class="row col s12">
                                                 <div class="input-field col s12">
-                                                    <input type="text" class="validate" ng-model="exp.technologies" name="project{{$index+1}}Technologies">
+                                                    <input type="text" class="validate" ng-model="exp.technologies" required name="project{{$index+1}}Technologies">
                                                     <label>Technologies Used</label>
                                                 </div>
                                             </div>
                                             <div class=" row col s12">
                                                 <div class="input-field col s12">
-                                                    <textarea class="materialize-textarea validate" ng-model="exp.description" name="project{{$index+1}}Description"></textarea>
+                                                    <textarea class="materialize-textarea validate" required ng-model="exp.description" name="project{{$index+1}}Description"></textarea>
                                                     <label>Description</label>
                                                 </div>
                                             </div>
@@ -247,7 +247,7 @@
                                         <div class=" col s11 row">
                                             <div class="row">
                                                 <div class="input-field col s6">
-                                                    <input type="text" class="validate" ng-model="cert.provider" name="certificate{{$index+1}}Provider">
+                                                    <input type="text" class="validate" ng-model="cert.provider" name="certificate{{$index+1}}Provider" required>
                                                     <label>Provider</label>
                                                 </div>
                                                 <div class="input-field col s6">
@@ -257,7 +257,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input type="text" class="validate" ng-model="edu.name" name="certificate{{$index+1}}Name">
+                                                    <input type="text" class="validate" ng-model="cert.name" name="certificate{{$index+1}}Name" required>
                                                     <label>Name</label>
                                                 </div>
                                             </div>
@@ -285,11 +285,11 @@
                                         <div class=" col s11 row">
                                             <div class="row">
                                                 <div class="input-field col s6">
-                                                    <input type="text" class="validate" ng-model="edu.qualification" name="education{{$index+1}}Qualification">
+                                                    <input type="text" class="validate" ng-model="edu.qualification" name="education{{$index+1}}Qualification" required>
                                                     <label>Qualification</label>
                                                 </div>
                                                 <div class="input-field col s6">
-                                                    <input type="text" class="validate" ng-model="edu.stream" name="education{{$index+1}}Stream">
+                                                    <input type="text" class="validate" ng-model="edu.stream" name="education{{$index+1}}Stream" required>
                                                     <label>Stream</label>
                                                 </div>
                                             </div>
@@ -299,13 +299,13 @@
                                                     <label>Marks</label>
                                                 </div>
                                                 <div class="input-field col s6">
-                                                    <input type="number" class="validate" ng-model="edu.pasingYear" name="education{{$index+1}}pasingYear">
+                                                    <input type="number" class="validate" ng-model="edu.pasingYear" name="education{{$index+1}}PasingYear" required>
                                                     <label>Passing Year</label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input type="text" class="validate" ng-model="edu.institute" name="education{{$index+1}}institute">
+                                                    <input type="text" class="validate" ng-model="edu.institute" name="education{{$index+1}}Institute" required>
                                                     <label>Institute/University</label>
                                                 </div>
                                             </div>
@@ -338,7 +338,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <textarea class="validate materialize-textarea" ng-model="coverLetter.opening" name="coverLetterOpening"></textarea>
+                                                <textarea class="validate materialize-textarea" ng-model="coverLetter.opening" name="coverLetterOpening" required></textarea>
                                                 <label>Cover Letter Opening</label>
                                             </div>
                                         </div>
@@ -356,7 +356,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <textarea class="validate materialize-textarea" ng-model="coverLetter.close" name="coverLetterClose"></textarea>
+                                                <textarea class="validate materialize-textarea" ng-model="coverLetter.close" name="coverLetterClose" required></textarea>
                                                 <label>Cover Letter Closing</label>
                                             </div>
                                         </div>
@@ -372,27 +372,27 @@
                                     <legend>
                                         <h5>Accolades</h5>
                                     </legend>
-                                    <div class="row" ng-repeat="accolade in accolades">
+                                    <div class="row" ng-repeat="accolade in accolades track by $index">
                                         <div class=" col s11 row">
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input type="text" class="validate" ng-model="accolade.title">
+                                                    <input type="text" class="validate" ng-model="accolade.title" name="accolade{{$index+1}}Title" required>
                                                     <label>Title</label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="input-field col s6">
-                                                    <input type="text" class="validate" ng-model="accolade.image">
+                                                    <input type="text" class="validate" ng-model="accolade.image" name="accolade{{$index+1}}Image">
                                                     <label>Image Name</label>
                                                 </div>
                                                 <div class="input-field col s6">
-                                                    <input type="url" class="validate" ng-model="accolade.link">
+                                                    <input type="url" class="validate" ng-model="accolade.link" name="accolade{{$index+1}}Link">
                                                     <label>Link - If Any</label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <textarea class="validate materialize-textarea" ng-model="accolade.description"></textarea>
+                                                    <textarea class="validate materialize-textarea" ng-model="accolade.description" name="accolade{{$index+1}}Description" required></textarea>
                                                     <label>Description</label>
                                                 </div>
                                             </div>
@@ -479,6 +479,38 @@
                                     </legend>
                                     <p ng-show="createProfile.$invalid">
                                         Please fill in all the details properly. There seems to be some issues with your details filled in please correct them.
+                                        <ul class="red-text">
+                                            <li ng-if="createProfile.name.$invalid">*Personal Details: Name is required </li>
+                                            <li ng-if="createProfile.username.$invalid">*Personal Details: Username is required </li>
+                                            <li ng-if="createProfile.aboutMe.$invalid">*Personal Details: About Me is required </li>
+                                            <li ng-if="createProfile.email.$error.required">*Personal Details: Email is required </li>
+                                            <li ng-if="createProfile.email.$invalid">*Personal Details: Email entered is not a valid email. </li>
+                                            <li ng-if="createProfile.alertnateEmail.$invalid">*Personal Details: Alternate Email entered is not a valid email. </li>
+                                            <li ng-if="createProfile.designation.$invalid">*Personal Details: Designation is required. </li>
+                                            <li ng-if="createProfile.contactNumber.$error.required">*Personal Details: Contact Number is required. </li>
+                                            <li ng-if="createProfile.contactNumber.$invalid && createProfile.contactNumber.$touched">*Personal Details: Contact Number entered is invalid(should be 10 digits). </li>
+                                            <li ng-if="createProfile.alternateNumber.$error && createProfile.alternateNumber.$touched">*Personal Details: Alternate Number entered is invalid(should be 10 digits). </li>
+                                            <li ng-if="createProfile.resumeLink.$error.required">*Personal Details: Resume Link is required. </li>
+                                            <li ng-if="createProfile.resumeLink.$invalid  && createProfile.resumeLink.$touched">*Personal Details: Resume Link is invalid should be a url preferably to a File. </li>
+                                            <li ng-if="createProfile['project'+($index+1)+'Name'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Project Name for Work Experiece Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile.['project'+($index+1)+'Organization'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Organization for Work Experiece Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile.['project'+($index+1)+'Technologies'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Technologies for Work Experiece Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile.['project'+($index+1)+'Description'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Description for Work Experiece Item {{($index+1)}} is required. </li>
+
+                                            <li ng-if="createProfile.['certificate'+($index+1)+'Provider'].$error.required" ng-repeat="certi in certifications track by $index">*Certifications: Provider for Certification Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile.['certificate'+($index+1)+'Name'].$error.required" ng-repeat="certi in certifications track by $index">*Certifications: Name for Certification Item {{($index+1)}} is required. </li>
+
+                                            <li ng-if="createProfile.['education'+($index+1)+'Qualification'].$error.required" ng-repeat="ed in education track by $index">*Education: Qualification for Education Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile.['education'+($index+1)+'PassingYear'].$error.required" ng-repeat="ed in education track by $index">*Education: PassingYear for Education Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile.['education'+($index+1)+'Institute'].$error.required" ng-repeat="ed in education track by $index">*Education: Institute for Education Item {{($index+1)}} is required. </li>
+
+                                            <li ng-if="createProfile.coverLetterOpening.$error.required" >*Cover Letter: Opening for Cover Letter is required. </li>
+                                            <li ng-if="createProfile.coverLetterClose.$error.required">*Cover Letter: Closing for Cover Letter is required. </li>
+
+                                            <li ng-if="createProfile.['accolade'+($index+1)+'Title'].$error.required" ng-repeat="acc in accolades track by $index">*Accolades: Title for Accolades Item {{($index+1)}} is required.</li>
+                                            <li ng-if="createProfile.['accolade'+($index+1)+'Description'].$error.required" ng-repeat="acc in accolades track by $index">*Accolades: Description for Accolades Item {{($index+1)}} is required. </li>
+
+                                        </ul>
                                     </p>
                                     <div class="row text-center" ng-show="createProfile.$valid">
                                         <a class=" waves-effect btn" ng-click="downloadFile()" download="profile.json" ng-href="{{ url }}" ng-class="$parent.styleSheet"><span class="fa fa-download"></span> Download Profile</a>

@@ -1,9 +1,9 @@
 <div class="switch layoutSelector" title="Toggle Layout Style" ng-if="layoutToggle">
     <label>
-        <span>Side</span>
+        <span>Side Layout</span>
         <input type="checkbox" id="layoutSwitch" ng-change="togglelayout()" ng-model="topLayout">
         <span class="lever" ng-class="$parent.styleSheet"></span>
-        <span>Top</span>
+        <span>Top Layout</span>
     </label>
 </div>
 
@@ -13,7 +13,7 @@
     </a>
     <ul>
         <li title="Default Theme"><a class="btn-floating" ng-click="$parent.updateStyle('default')"></a></li>
-        <li title="Red Theme"><a class="btn-floating red" ng-click="$parent.updateStyle($parent.styleSheet)"></a></li>
+        <li title="Red Theme"><a class="btn-floating red" ng-click="$parent.updateStyle('red')"></a></li>
         <li title="Green Theme"><a class="btn-floating green" ng-click="$parent.updateStyle('green')"></a></li>
         <li title="Blue Theme"><a class="btn-floating blue" ng-click="$parent.updateStyle('blue')"></a></li>
         <li title="Orange Theme"><a class="btn-floating orange" ng-click="$parent.updateStyle('orange')"></a></li>
