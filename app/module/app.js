@@ -39,8 +39,6 @@ manish.run(['$rootScope', '$route', '$window', 'profileService', function ($root
     $rootScope.$on('$routeChangeSuccess', function () {
         //update the title of the page
         document.title = $route.current.title;
-        //hide the sidebar nav div as it stays even after view changes as being appended to documnet ouside the ng-view div
-        $('.button-collapse').sideNav('hide');
     });
     if ($window.localStorage) {
         var layout = $window.localStorage.getItem("manish_Layout");
