@@ -22,17 +22,17 @@
             <form name="createProfile" class="row-eq-height">
                 <div class="col s2 z-depth-2 " style="padding:0px;margin:0px;">
                     <ul class="col s12 text-center createTabs">
-                        <li class="btn col s12 waves-effect" ng-click="tab='getProfile'" ng-class="$parent.styleSheet">Instructions</li>
-                        <li class="btn col s12 waves-effect" ng-click="tab='personal'" ng-class="$parent.styleSheet">Personal</li>
-                        <li class="btn col s12 waves-effect" ng-click="tab='summary'" ng-class="$parent.styleSheet">Experience Summary</li>
-                        <li class="btn col s12 waves-effect" ng-click="tab='skills'" ng-class="$parent.styleSheet">Skills</li>
-                        <li class="btn col s12 waves-effect" ng-click="tab='experience'" ng-class="$parent.styleSheet">Work Experience</li>
-                        <li class="btn col s12 waves-effect" ng-click="tab='certificates'" ng-class="$parent.styleSheet">Certificates</li>
-                        <li class="btn col s12 waves-effect" ng-click="tab='education'" ng-class="$parent.styleSheet">Education</li>
-                        <li class="btn col s12 waves-effect" ng-click="tab='coverLetter'" ng-class="$parent.styleSheet">Cover Letter</li>
-                        <li class="btn col s12 waves-effect" ng-click="tab='accolades'" ng-class="$parent.styleSheet">Accolades</li>
-                        <li class="btn col s12 waves-effect" ng-click="tab='social'" ng-class="$parent.styleSheet">Social</li>
-                        <li class="btn col s12 waves-effect" ng-click="tab='submit'" ng-class="$parent.styleSheet">Download</li>
+                         <li class="btn col s12 waves-effect" ng-click="tab='getProfile'" ng-class="$parent.styleSheet">Instructions <span ng-if="tab=='getProfile'" class="fa fa-angle-double-left"></span></li>
+                        <li class="btn col s12 waves-effect" ng-click="tab='personal'" ng-class="$parent.styleSheet">Personal <span ng-if="tab=='personal'" class="fa fa-angle-double-left"></span></li>
+                        <li class="btn col s12 waves-effect" ng-click="tab='summary'" ng-class="$parent.styleSheet">Exp. Summary <span ng-if="tab=='summary'" class="fa fa-angle-double-left"></span></li>
+                        <li class="btn col s12 waves-effect" ng-click="tab='skills'" ng-class="$parent.styleSheet">Skills <span ng-if="tab=='skills'" class="fa fa-angle-double-left"></span></li>
+                        <li class="btn col s12 waves-effect" ng-click="tab='experience'" ng-class="$parent.styleSheet">Work Experience <span ng-if="tab=='experience'" class="fa fa-angle-double-left"></span></li>
+                        <li class="btn col s12 waves-effect" ng-click="tab='certificates'" ng-class="$parent.styleSheet">Certificates <span ng-if="tab=='certificates'" class="fa fa-angle-double-left"></span></li>
+                        <li class="btn col s12 waves-effect" ng-click="tab='education'" ng-class="$parent.styleSheet">Education <span ng-if="tab=='education'" class="fa fa-angle-double-left"></span></li>
+                        <li class="btn col s12 waves-effect" ng-click="tab='coverLetter'" ng-class="$parent.styleSheet">Cover Letter <span ng-if="tab=='coverLetter'" class="fa fa-angle-double-left"></span></li>
+                        <li class="btn col s12 waves-effect" ng-click="tab='accolades'" ng-class="$parent.styleSheet">Accolades <span ng-if="tab=='accolades'" class="fa fa-angle-double-left"></span></li>
+                        <li class="btn col s12 waves-effect" ng-click="tab='social'" ng-class="$parent.styleSheet">Social <span ng-if="tab=='social'" class="fa fa-angle-double-left"></span></li>
+                        <li class="btn col s12 waves-effect" ng-click="tab='submit'" ng-class="$parent.styleSheet">Download <span ng-if="tab=='submit'" class="fa fa-angle-double-left"></span></li>
                     </ul>
                 </div>
                 <div class="col s10 z-depth-2">
