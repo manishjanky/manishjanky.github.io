@@ -1,7 +1,7 @@
 var homeController = manish.controller("homeController", function ($scope, $http, $location, $rootScope, profileService) {
     $scope.date = new Date();
     $scope.layoutToggle = true;
-    $scope.topLayout = profileService.layoutStyle == "top" ? true : false;
+    $scope.topLayout = profileService.layoutStyle == "top" ? false : true;
     //console.log($scope.topLayout);
     $scope.userProfile = function () {
         if (profileService.userProfile != null) {

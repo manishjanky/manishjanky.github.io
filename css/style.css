@@ -220,3 +220,10 @@ section li:before {
     width: 500px;
     position: absolute;
 }
+
+@media (max-width:992px){
+      /* hide the layout selector in small devices as the layout rendered is same for both the cases*/
+ .layoutSelector{
+        display: none;
+    }
+}
