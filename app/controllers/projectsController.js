@@ -1,5 +1,5 @@
 var projectsController = manish.controller("projectsController", function ($scope, $http, $location, $rootScope, $window,profileService) {
-    $scope.topLayout = profileService.layoutStyle == "top" ? true : false;
+    $scope.topLayout = profileService.layoutStyle == "side" ? false : true;
     $scope.layoutToggle = true;
     $scope.togglelayout = function () {
         $scope.topLayout = !$scope.topLayout;
