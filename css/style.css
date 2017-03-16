@@ -269,7 +269,14 @@ section li:before {
   transition: all .5s ease-out ;
 
 }
+.indicator{
+   background: cornflowerblue;
+   background-color:cornflowerblue;
+}
 
+.tab{
+    cursor: pointer;
+}
 div.demoCols{
     padding:20px !important;
 }
