@@ -15,6 +15,7 @@
                     <div ng-if="project.startDate" class="flow-text">Time: From {{project.startDate}} To {{project.endDate}}<span ng-if="!project.endDate">Today</span></div>
                     <div ng-if="project.client" class="flow-text">Client: {{project.client}}</div>
                     <div ng-if="project.technologies" class="flow-text">Technologies: {{project.technologies}}</div>
+                    <div ng-if="project.link" class="flow-text"><a ng-href="{{project.link}}" class="btn" ng-class="$parent.styleSheet" target="_blank" ng-if="project.link">{{project.name}}</a></div>
                 </div>
             </div>
         </section>

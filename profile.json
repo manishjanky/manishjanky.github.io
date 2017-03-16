@@ -145,6 +145,16 @@
            "endDate":"",
             "designation":"System Engineer",
             "organization":"Infosys"
+       },
+       {
+           "name":"mTip",
+           "description":"A cross browser javascript custom tooltip plugin. A simple, flexible, extensible and customizable plugin by Manish Kumar under MIT license.",
+           "technologies":"CSS, HTML5, JavaScript",
+           "client":"Open Source Plugin",
+           "startDate":"Feb 2017",
+           "endDate":"",
+            "designation":"",
+            "organization":"Open Source"
        }
    ],
    "coverLetter":{
