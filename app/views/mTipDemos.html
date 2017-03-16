@@ -1,0 +1,229 @@
+﻿<div class="container">
+    <div class="row white" style="margin-bottom:0px;">
+        <div class="col s6">
+            <ul class="tabs tabs-fixed-width " style="padding-left:0px;overflow:visible;text-transform:none">
+                <li class="tab"><a class="blue-text" data-mtip="mTip Get Started" ng-click="tab='tab1'" ng-class="{'active':tab=='tab1'}">Getting Started</a></li>
+                <li class="tab"><a class="blue-text" data-mtip="Options" ng-class="{'active':tab=='tab2'}" ng-click="tab='tab2'">Options</a></li>
+                <li class="tab"><a class="blue-text" data-mtip="Frequently Asked Questions" ng-class="{'active':tab=='tab3'}" ng-click="tab='tab3'">FAQ</a></li>
+                <li class="tab"><a class="blue-text" data-mtip="Demos" ng-class="{'active':tab=='tab3'}" ng-click="tab='tab4'">Demos</a></li>
+
+            </ul>
+        </div>
+        <div class="col s6 tabs" data-mtip="mTip A Javascript Tooltip Plugin">
+            <span class="helper"><img src="../../favicon.ico" class="mTipLogo" /></span>
+        </div>
+    </div>
+    <div class="parallax-container text-center blue-text valign z-depth-1">
+        <h1 class="mtipFont">M</h1>
+
+        <h3>mTip</h3><h5>A cross browser javascript custom tooltip plugin. A simple, flexible, extensible and customizable plugin.</h5>
+        <div class="browsers">
+            <span data-mtip="Supports Chrome" class="fa fa-3x fa-chrome tooltip"></span> <span data-mtip="Supports Firefox" class="fa fa-3x fa-firefox tooltip"></span> <span data-mtip="Supports IE8+" class="fa fa-3x fa-internet-explorer tooltip"></span>
+            <span data-mtip="Supports Safari" class="fa fa-3x fa-safari tooltip"></span><span data-mtip="Supports Opera" class="fa fa-3x fa-opera tooltip"></span>
+        </div>
+        <div>
+            <a href="Downloads/mTip.zip" download="mTip.zip" class="btn blue" style="margin:10px;"> <span class="fa fa-download"> Download</span></a>
+        </div>
+    </div>
+    <div class="white z-depth-4" style="padding:50px;">
+        <div ng-show="tab=='tab1'" class="col s12">
+            <div class="row col s12"  >
+                <div class="row col s12">
+                    <h2 ><span class="fa fa-hourglass-start"></span>Getting Started</h2>
+                </div>
+
+                <h4>1.Download & Include mTip.js</h4>
+                <p class="flow-text">
+                    After you <a href="" download>Download mTip</a> include mTip.js files in your html.
+                    <pre class="codeBlock">
+                    <span>&lt;head&gt;</span>
+                        <span>&lt;script type="text/javascript" src="mTip/mTip.js"&gt;&lt;/script&gt;</span>
+                    <span>&lt;/head&gt;</span></pre>
+                </p>
+                <p class="flow-text">
+                    Note*: You don't need any jQuery for mTip to work. It built on pure javascript and supports most of the browsers ou there as listed above.
+                </p>
+
+                <h4 data-mtip="Set up Your Markup">2.Set up Your Markup</h4>
+                <p class="flow-text">
+                    To have the elements to show mTip tooltips set the <span class="chip">data-mtip=*</span> attribute to whatever text you want to be shown in the tooltip.
+                    <pre class="codeBlock">
+                //Apply tooltip to a span element
+                <span>&lt;span data-mtip="This is a span"&gt;This is a span&lt;/span&gt;</span>
+
+                //Apply tooltip to a div
+                <span>&lt;div data-mtip="This is a div"&gt;This is a div&lt;/div&gt;</span>
+
+                //Apply tooltip to a image
+                <span>&lt;img src="img.jpg" data-mtip="This is a Image"&gt;This is a Image&lt;/div&gt;</span></pre>
+                </p>
+
+                <h4>3.Activate mTip Tooltip</h4>
+                <p class="flow-text">
+                    To last thing to be done is to activate mTip. In order to activate do this add below code in your head tag.
+                    <pre class="codeBlock">
+                //If you are using jQuery
+                <span>&lt;script&gt;
+                    $(document).ready(function(){
+                        mTip();
+                    });
+                &lt;/script&gt;</span>
+
+                //If you are not using jQuery
+                <span>&lt;script&gt;
+                        window.onload=function(){
+                            mTip();
+                        }
+                &lt;/script&gt;</span>
+
+                //If you want to use mTip in angular projects keep the below code in your controller
+                <span>&lt;script&gt;
+                     $scope.$on('$viewContentLoaded', function () {
+                        //Here your view content is fully loaded !!
+                        mTip();
+                     });
+                &lt;/script&gt;</span></pre>
+                </p>
+                <p class="flow-text">And there you go nothing else needed. You are successfuly done away with using the default html tooltips and in place of that you will now see tooltips of your choice which you can even configure according to your choice. Read more in <a ng-click="tab='tab2'">Options</a> on how to customize the mTip tooltips.</p>
+            </div>
+        
+        </div>
+        <div ng-show="tab=='tab2'" class="col s12">
+            <div class="row col s12"  >
+                <div class="row col s12">
+                    <h2><span class="fa fa-list-alt"></span> Options</h2>
+                </div>
+                <p class="flow-text">mTip gives you a range of options which you can use to customize your tooltips to your satisfaction. Here is how you can use these options.</p>
+                <pre class="codeBlock">
+                <span>&lt;script&gt;
+                    $(document).ready(function(){
+                        mTip({
+                            color:"white",
+                            backgroundColor:"rgb(158, 226, 235)",
+                            position:"bottom"
+                        });
+                    });
+                &lt;/script&gt;</span></pre>
+                <p class="flow-text">
+                    Below is the list of currently available options. More to come soon.
+                    <table class="striped bordered responsive-table">
+                        <thead>
+                            <tr class="row">
+                                <th class="col s2">Option</th>
+                                <th class="col s4">Accepted Values</th>
+                                <th class="col s6">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr ng-repeat="opt in mtipOptions | orderBy:'name'" class="row">
+                                <td class="col s2">
+                                    <span class="chips">{{::opt.name}}</span>
+                                </td>
+                                <td class="col s4">
+                                    {{::opt.values}}
+                                </td>
+                                <td class="col s6">
+                                    {{::opt.description}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+            </div>
+            
+        </div>
+        <div ng-show="tab=='tab3'" class="col s12">
+            <div class="row col s12">
+                <div class="row col s12"  >
+                    <h2 data-mtip="FAQ's"><span class="fa fa-question"></span> FAQ's</h2>
+                </div>
+                <div class="row col s12">
+                    <ul class="collapsible" data-collapsible="expandable">
+                        <li ng-repeat="ques in faqs">
+                            <div class="collapsible-header"><h4>{{$index+1+"."}} {{::ques.question}}</h4></div>
+                            <div class="collapsible-body"><p class="flow-text">Ans. {{::ques.answer}}</p></div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div ng-show="tab=='tab4'" class="col s12">
+            <div class="row col s12">
+                <div class="row col s12">
+                    <h2 data-mtip="Options"><span class="fa fa-play-circle"></span> Demos</h2>
+                </div>
+                <div class="row col s12">
+                    <div class="col s6 demoCols">
+                        <a class="btn blue tooltip" data-mtip="Hover Over Me to See Tooltip">
+                            Hover
+                        </a>
+                        <span class="flow-text">Default settings/configuration</span>
+                    </div>
+                    <div class="col s6 demoCols">
+                        <a class="btn blue tooltip" data-mtip="My position adjust with the cursor movement">
+                            Hover
+                        </a>
+                        <span class="flow-text">Adaptive Position With Cursor</span>
+                    </div>
+                    <div class="col s6 demoCols">
+                        <a class="btn blue clickTrigger" data-mtip="Tooltip triggered on click">
+                            Click
+                        </a>
+                        <span class="flow-text">Triggers on Click</span>
+                    </div>
+                    <div class="col s6 demoCols">
+                        <a class="btn blue custColor" data-mtip="I have custom background/text color">
+                            Hover
+                        </a>
+                        <span class="flow-text">Custom Colors</span>
+                    </div>
+                    <div class="col s6 demoCols">
+                        <a class="btn blue delay" data-mtip="I was shown after initial delay of 2000ms">
+                            Hover
+                        </a>
+                        <span class="flow-text">Trigger Delay Time</span>
+                    </div>
+                    <div class="col s6 demoCols">
+                        <a class="btn blue custColor opacity" data-mtip="My Background has opacity 0.5">
+                            Hover
+                        </a>
+                        <span class="flow-text">Transparent Background</span>
+                    </div>
+                    <div class="col s6 demoCols">
+                        <a class="btn blue position" data-mtip="My position is Top">
+                            Hover
+                        </a>
+                        <span class="flow-text">Custom position</span>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row col s12" >
+               <blockquote class="flow-text">More features coming soon..</blockquote> 
+            </div>
+
+        </div>
+        <div class="white text-center">
+            Copyright &copy; 2017 Manish Kumar. Released under the MIT license.
+        </div>
+    </div>
+
+    
+</div>
+
+
+<script>
+    $('ul.tabs').tabs();
+</script>
+<style>
+    body{
+        background-image:url(images/back.jpg);
+        background-attachment:fixed;
+        background-size:cover;
+    }
+    .parallax-container {
+        background: rgba(222,234,255,0.2);
+    }
+</style>

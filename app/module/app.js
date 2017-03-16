@@ -32,6 +32,10 @@ manish.config(['$routeProvider', '$locationProvider', '$compileProvider', functi
           title: 'Credits',
           templateUrl: 'app/views/credits.html',
           controller: '',
+      }).when('/mtip', {
+          title: 'mTip',
+          templateUrl: 'app/views/mTipDemos.html',
+          controller: 'mTipController',
       })
 }]);
 
