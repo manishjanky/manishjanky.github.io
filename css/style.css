@@ -269,8 +269,7 @@ section li:before {
   transition: all .5s ease-out ;
 
 }
-.indicator{
-   background: cornflowerblue;
+.tabs .indicator{
    background-color:cornflowerblue;
 }
 
