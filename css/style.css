@@ -229,17 +229,17 @@ section li:before {
 .parallax-container{
     padding:100px;
 }
-.mTipLogo{
-    max-height:50px;
-    max-width:50px;
-    vertical-align: middle;
+.mtiplogo{
+    max-height:100px;
+    max-width:100px;
+
 }
 
 .helper {
     float:right;
-    display: inline-block;
     height: 100%;
     vertical-align: middle;
+    line-height: 50px;
 }
 
 .browsers{
