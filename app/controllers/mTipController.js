@@ -26,7 +26,7 @@
         {
             name: "opacity",
             values: "Any valid integer between 0 - 1",
-            description: "Delays the appearence of the tooltip for the number of miliseconds passed as the value of the delay parameter."
+            description: "Sets the opacity of the tooltip i.e gives transparency to the tooltip with 0 being transparent and 1 being opaque. Also using this can affect the transparency of contents of the tooltip."
         },
         {
             name: "delay",
@@ -64,7 +64,7 @@
             answer:"No mTip is a pure javascript plugin. You don't need jQuery for mTip to work."
         }, {
             question: "Which all browsers do mTip support?",
-            answer: "mTip supports all modern browsers. IE8+, Edge, Chrome, Firefox, Opera, Safari."
+            answer: "mTip supports all modern browsers. IE8+, Edge, Chrome, Firefox, Opera."
         }, {
             question: "I found a bug/issue with mTip?",
             answer: "Go ahead and report a issue on issue tracker on GitHub: https://github.com/manishjanky/mTip/issues"
