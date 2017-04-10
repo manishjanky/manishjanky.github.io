@@ -181,6 +181,12 @@
            "title":"MVA Know it. Prove it. Web Development Learning Challenge Badge",
            "description":"This badge proves that you have conquered the Web Development Learning Challenge. You have added the MEAN stack to your developer’s toolbox and have skilled up on MongoDB, Express, Angular, and Node.js.",
            "link":"https://api.badgr.io/share/badge/2e3fbeeb-c5c4-4e88-807f-f64a5fc1ad1b"
+       },
+       {
+	       "image":"exam461.png",
+	       "title":"Exam 461: Querying Microsoft SQL Server 2012/2014",
+	       "description":"Passing Exam 461: Querying Microsoft SQL Server 2012/2014 validates the skills and knowledge necessary to create database objects, work with and modify data, as well as troubleshoot and optimize queries.",
+	       "link":"https://www.youracclaim.com/badges/1d189a2c-0d72-4987-b26f-4473c808603e/public_url"
        }
    ]	
 }
