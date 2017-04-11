@@ -59,12 +59,12 @@
         <div class="col l9 m9 s9 info">
             <div>
                 <p class="zeroMargin socialLinks">
-                    <a  ng-href="mailto:{{user.contactDetails.email}}?Subject=Hello%20{{user.name}}">{{user.contactDetails.email}}
+                    <a  ng-href="mailto:{{user.contactDetails.email}}?Subject=Hello {{user.name}}">{{user.contactDetails.email}}
                 </p>
             </div>
             <div ng-if="user.alternateEmail">
                 <p class="zeroMargin socialLinks">
-                    <a ng-href="mailto:{{user.contactDetails.alternateEmail}}?Subject=Hello%20{{user.name}}">{{user.contactDetails.alternateEmail}}</a>
+                    <a ng-href="mailto:{{user.contactDetails.alternateEmail}}?Subject=Hello {{user.name}}">{{user.contactDetails.alternateEmail}}</a>
                 </p>
             </div>
         </div>
