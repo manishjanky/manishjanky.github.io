@@ -41,13 +41,13 @@
             <div>
                 <p class="zeroMargin">
                     Mobile:
-                    {{user.contactDetails.contactNumber}}
+                    <a ng-href="tel:{{user.contactDetails.contactNumber}}">{{user.contactDetails.contactNumber}}</a>
                 </p>
             </div>
             <div ng-if="user.contactDetails.alternateNumber">
                 <p class="zeroMargin">
                     Alternate:
-                    {{user.contactDetails.alternateNumber}}
+                     <a ng-href="tel:{{user.contactDetails.alternateNumber}}">{{user.contactDetails.alternateNumber}}</a>
                 </p>
             </div>
         </div>
@@ -59,12 +59,12 @@
         <div class="col l9 m9 s9 info">
             <div>
                 <p class="zeroMargin">
-                    {{user.contactDetails.email}}
+                    <a ng-href="mailto:{{user.contactDetails.email}}?Subject=Hello%20{{user.name}}">{{user.contactDetails.email}}
                 </p>
             </div>
             <div ng-if="user.alternateEmail">
                 <p class="zeroMargin">
-                    {{user.contactDetails.alternateEmail}}
+                    <a ng-href="mailto:{{user.contactDetails.alternateEmail}}?Subject=Hello%20{{user.name}}">{{user.contactDetails.alternateEmail}}</a>
                 </p>
             </div>
         </div>
