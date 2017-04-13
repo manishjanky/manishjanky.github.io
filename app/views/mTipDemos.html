@@ -106,8 +106,8 @@
                 &lt;/script&gt;</span></pre>
                 <p class="flow-text">
                     Below is the list of currently available options. More to come soon.
-                    <table class="striped bordered responsive-table">
-                        <thead>
+                    <table class="striped bordered responsive-table row">
+                        <thead class="row col s12">
                             <tr class="row">
                                 <th class="col s2">Option</th>
                                 <th class="col s4">Accepted Values</th>
@@ -115,8 +115,8 @@
                             </tr>
                         </thead>
 
-                        <tbody>
-                            <tr ng-repeat="opt in mtipOptions | orderBy:'name'" class="row">
+                        <tbody class="row col s12">
+                            <tr ng-repeat="opt in mtipOptions | orderBy:'name'" class="row col s12">
                                 <td class="col s2">
                                     <span class="chips">{{::opt.name}}</span>
                                 </td>
