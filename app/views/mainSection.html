@@ -1,4 +1,11 @@
-<section class="col m12 s12 section z-depth-2" ng-class="{'l8':!toplayout,'l12':topLayout}">  <!-- set ng-class according to selected layout design --><
+<section class="col m12 s12 section z-depth-2" ng-class="{'l8':!toplayout,'l12':topLayout}">
+    <!-- set ng-class according to selected layout design -->
+    <div class="row zeroMargin" style="padding:5px">
+        <div class="col s12 center-align">
+            <a class="btn" ng-class="$parent.styleSheet" href="https://manishjanky.github.io/angular2-portfolio/">Switch To Angular2.x Version</a>
+        </div>
+    </div>
+
     <div class="row col l12 m12 s12 card horizontal " ng-if="user.summary">
         <div class="card-content">
             <div class="col l3 m3 s3 ">
@@ -45,8 +52,7 @@
                     <h5>{{experience.name}} <span> @{{experience.organization}}</span></h5>
                     <label>{{experience.designation}}</label>
                     <blockquote class=""><span>{{experience.startDate}} - </span><span ng-if="experience.endDate">{{experience.endDate}}</span>
-                        <span
-                            ng-if="!experience.endDate">Today</span>
+                        <span ng-if="!experience.endDate">Today</span>
                     </blockquote>
                     <div>
                         <p>{{experience.description}}</p>
@@ -105,4 +111,4 @@
     </div>
 </section>
 
- <ng-include src=" 'app/views/themes.html'"></ng-include>
+<ng-include src=" 'app/views/themes.html'"></ng-include>

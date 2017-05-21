@@ -2,6 +2,11 @@
     <div class="row fullHeight">
         <ng-include src=" 'app/views/layout.html'"></ng-include>
         <section class="col  m12 s12 section z-depth-2" ng-class="{'l8':!toplayout,'l12':topLayout}">
+            <div class="row zeroMargin" style="padding:5px">
+                <div class="col s12 center-align">
+                        <a class="btn" ng-class="$parent.styleSheet" href="https://manishjanky.github.io/angular2-portfolio/">Switch To Angular2.x Version</a>
+                </div>
+            </div>
             <div class="row col l12 m12 s12 card " ng-repeat="accolade in user.accolades">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" ng-src="images/accolades/{{accolade.image}}" err-src="images/errorImage.jpg">

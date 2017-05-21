@@ -1,5 +1,4 @@
-﻿
-<div class="container">
+﻿<div class="container">
     <div class="row fullHeight">
         <div class="row z-depth-2 zeroMargin" style="padding:5px;">
             <div class="col s1">
@@ -11,6 +10,7 @@
                         <li title="Accolades" class="btn-floating text-center z-depth-5" ng-class="$parent.styleSheet"><a href="#/accolades"><i class="fa fa-certificate"></i></a></li>
                         <li title="Cover Letter" class="btn-floating text-center z-depth-5" ng-class="$parent.styleSheet"><a href="#/coverLetter"><i class="fa fa-envelope-open-o"></i></a></li>
                         <li title="Get Own Profile" class="btn-floating text-center z-depth-5" ng-class="$parent.styleSheet"><a href="#/createProfile"><i class="fa fa-cloud-download"></i></a></li>
+                        <li title="mTip" class="btn-floating text-center" ng-class="$parent.styleSheet"><a href="#/mtip"><i class="mtipFont">M</i></a></li>
                     </ul>
                 </div>
             </div>
@@ -22,7 +22,7 @@
             <form name="createProfile" class="row-eq-height">
                 <div class="col s2 z-depth-2 " style="padding:0px;margin:0px;">
                     <ul class="col s12 text-center createTabs">
-                         <li class="btn col s12 waves-effect" ng-click="tab='getProfile'" ng-class="$parent.styleSheet">Instructions <span ng-if="tab=='getProfile'" class="fa fa-angle-double-left"></span></li>
+                        <li class="btn col s12 waves-effect" ng-click="tab='getProfile'" ng-class="$parent.styleSheet">Instructions <span ng-if="tab=='getProfile'" class="fa fa-angle-double-left"></span></li>
                         <li class="btn col s12 waves-effect" ng-click="tab='personal'" ng-class="$parent.styleSheet">Personal <span ng-if="tab=='personal'" class="fa fa-angle-double-left"></span></li>
                         <li class="btn col s12 waves-effect" ng-click="tab='summary'" ng-class="$parent.styleSheet">Exp. Summary <span ng-if="tab=='summary'" class="fa fa-angle-double-left"></span></li>
                         <li class="btn col s12 waves-effect" ng-click="tab='skills'" ng-class="$parent.styleSheet">Skills <span ng-if="tab=='skills'" class="fa fa-angle-double-left"></span></li>
@@ -78,7 +78,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s6">
-                                            <input type="tel" class="validate" ng-pattern="/^[0-9]+$/" name="contactNumber" ng-model="user.contactDetails.contactNumber" required>
+                                            <input type="tel" class="validate" ng-pattern="/^[0-9]+$/" name="contactNumber" ng-model="user.contactDetails.contactNumber"
+                                                required>
                                             <label>Mobile Number*</label>
                                         </div>
                                         <div class="input-field col s6">
@@ -178,7 +179,7 @@
                                         <div class="row col s11">
                                             <div class=" row col s12">
                                                 <div class="input-field col s4">
-                                                    <input type="text" ng-model="exp.name" required name="project{{$index+1}}Name"/>
+                                                    <input type="text" ng-model="exp.name" required name="project{{$index+1}}Name" />
                                                     <label>Project Name*</label>
                                                 </div>
                                                 <div class="input-field col s4">
@@ -407,7 +408,9 @@
                         <div class="row">
                             <div class="col s12">
                                 <fieldset>
-                                    <legend><h5>Social Profiles</h5></legend>
+                                    <legend>
+                                        <h5>Social Profiles</h5>
+                                    </legend>
                                     <div class="row">
                                         <div class=" col s12">
                                             <div class="input-field col s12">
@@ -483,20 +486,26 @@
                                             <li ng-if="createProfile.designation.$invalid">*Personal Details: Designation is required. </li>
                                             <li ng-if="createProfile.contactNumber.$error.required">*Personal Details: Contact Number is required. </li>
                                             <li ng-if="createProfile.contactNumber.$invalid && createProfile.contactNumber.$touched">*Personal Details: Contact Number entered is invalid(should be 10 digits). </li>
-                                            <li ng-if="createProfile.alternateNumber.$error && createProfile.alternateNumber.$touched">*Personal Details: Alternate Number entered is invalid(should be 10 digits). </li>
-                                            <li ng-if="createProfile['project'+($index+1)+'Name'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Project Name for Work Experiece Item {{($index+1)}} is required. </li>
-                                            <li ng-if="createProfile['project'+($index+1)+'Organization'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Organization for Work Experiece Item {{($index+1)}} is required. </li>
-                                            <li ng-if="createProfile['project'+($index+1)+'Technologies'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Technologies for Work Experiece Item {{($index+1)}} is required. </li>
-                                            <li ng-if="createProfile['project'+($index+1)+'Description'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Description for Work Experiece Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile.alternateNumber.$error && createProfile.alternateNumber.$touched">*Personal Details: Alternate Number entered is invalid(should be 10 digits).
+                                                </li>
+                                            <li ng-if="createProfile['project'+($index+1)+'Name'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Project Name for Work Experiece Item {{($index+1)}} is required.
+                                                </li>
+                                            <li ng-if="createProfile['project'+($index+1)+'Organization'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Organization for Work Experiece Item {{($index+1)}} is required.
+                                                </li>
+                                            <li ng-if="createProfile['project'+($index+1)+'Technologies'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Technologies for Work Experiece Item {{($index+1)}} is required.
+                                                </li>
+                                            <li ng-if="createProfile['project'+($index+1)+'Description'].$error.required" ng-repeat="proj in experience track by $index">*Work Experience: Description for Work Experiece Item {{($index+1)}} is required.
+                                                </li>
 
-                                            <li ng-if="createProfile['certificate'+($index+1)+'Provider'].$error.required" ng-repeat="certi in certifications track by $index">*Certifications: Provider for Certification Item {{($index+1)}} is required. </li>
+                                            <li ng-if="createProfile['certificate'+($index+1)+'Provider'].$error.required" ng-repeat="certi in certifications track by $index">*Certifications: Provider for Certification Item {{($index+1)}} is required.
+                                                </li>
                                             <li ng-if="createProfile['certificate'+($index+1)+'Name'].$error.required" ng-repeat="certi in certifications track by $index">*Certifications: Name for Certification Item {{($index+1)}} is required. </li>
 
                                             <li ng-if="createProfile['education'+($index+1)+'Qualification'].$error.required" ng-repeat="ed in education track by $index">*Education: Qualification for Education Item {{($index+1)}} is required. </li>
                                             <li ng-if="createProfile['education'+($index+1)+'PassingYear'].$error.required" ng-repeat="ed in education track by $index">*Education: PassingYear for Education Item {{($index+1)}} is required. </li>
                                             <li ng-if="createProfile['education'+($index+1)+'Institute'].$error.required" ng-repeat="ed in education track by $index">*Education: Institute for Education Item {{($index+1)}} is required. </li>
 
-                                            <li ng-if="createProfile.coverLetterOpening.$error.required" >*Cover Letter: Opening for Cover Letter is required. </li>
+                                            <li ng-if="createProfile.coverLetterOpening.$error.required">*Cover Letter: Opening for Cover Letter is required. </li>
                                             <li ng-if="createProfile.coverLetterClose.$error.required">*Cover Letter: Closing for Cover Letter is required. </li>
 
                                             <li ng-if="createProfile['accolade'+($index+1)+'Title'].$error.required" ng-repeat="acc in accolades track by $index">*Accolades: Title for Accolades Item {{($index+1)}} is required.</li>
@@ -527,5 +536,5 @@
         <li class="collection-item" ng-class="$parent.styleSheet"><a href="#/coverLetter">Cover Letter</a></li>
         <li class="collection-item" ng-class="$parent.styleSheet"><a href="#/createProfile">Get Profile</a></li>
     </ul>
-   
+
 </div>
