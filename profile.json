@@ -49,11 +49,11 @@
    "skills":[
       {
          "skill":"JavaScript",
-         "rating":9
+         "rating":8
       },
       {
          "skill":"AngularJS",
-         "rating":7.5
+         "rating":7
       },
       {
          "skill":"HTML5",
@@ -65,31 +65,15 @@
       },
       {
          "skill":"BootStrap",
-         "rating":6.5
+         "rating":7
       },
       {
          "skill":"Materialize CSS",
-         "rating":6
+         "rating":7
       },
       {
          "skill":"jQuery",
          "rating":8
-      },
-      {
-         "skill":"ASP.NET",
-         "rating":6.5
-      },
-      {
-         "skill":"SQL",
-         "rating":7.5
-      },
-      {
-         "skill":"PL/SQL",
-         "rating":7.5
-      },
-      {
-         "skill":"MSSQL",
-         "rating":7.5
       }
    ],
    "interests":[
