@@ -137,11 +137,11 @@
         },
         {
             "name": "Agile Cockpit",
-            "description": "",
+            "description": "A tool for Scrum based software development life cycle management that provides various apps for different aspects/events of Scrum",
             "technologies": "CSS, HTML5, JavaScript, SCSS, jQuery",
             "client": "Agile Cockpit",
             "startDate": "Aug 2017",
-            "endDate": "A tool for Scrum based software development life cycle management that provides various apps for different aspects/events of Scrum",
+            "endDate": "",
             "designation": "Senior Technical Developer",
             "organization": "Agile Cockpit"
         },
