@@ -146,7 +146,7 @@
             "organization": "Agile Cockpit"
         },
         {
-            "name": "mTip",
+            "name": "mtip",
             "description": "A cross browser javascript custom tooltip plugin. A simple, flexible, extensible and customizable plugin by Manish Kumar under MIT license.",
             "technologies": "CSS, HTML5, JavaScript",
             "client": "Open Source Plugin",
@@ -155,6 +155,28 @@
             "designation": "",
             "organization": "Open Source",
             "link": "https://manishjanky.github.io/#/mtip"
+        },
+        {
+            "name": "ngx-pagination-bootstrap",
+            "description": "Bootstrap(4) based pagination module for Angular(2+) applications.",
+            "technologies": "Angular, HTML5, SCSS, JavaScript",
+            "client": "Open Source",
+            "startDate": "Dec 2017",
+            "endDate": "",
+            "designation": "",
+            "organization": "Open Source",
+            "link": "https://manishjanky.github.io/ngx-pagination-bootstrap-demo/"
+        },
+		{
+            "name": "ngx-select-dropdown",
+            "description": "Custom Dropdown component for Angular 2+ applications with multiple and single selection options.",
+            "technologies": "Angular, HTML5, SCSS, JavaScript",
+            "client": "Open Source",
+            "startDate": "Jan 2018",
+            "endDate": "",
+            "designation": "",
+            "organization": "Open Source",
+            "link": "https://manishjanky.github.io/ngx-select-dropdown/"
         }
     ],
     "coverLetter": {
