@@ -145,6 +145,16 @@
             "designation": "Senior Technical Developer",
             "organization": "Agile Cockpit"
         },
+	{
+            "name": "SBE",
+            "description": "An application that allows small business owners to register their business with the legal authority and open a business account with the bank.",
+            "technologies": "JavaScript, HTML5, CSS, SCSS, Angular, Adobe Analytics",
+            "client": "Bank",
+            "startDate": "Feb 2018",
+            "endDate": "",
+            "designation": "Senior Associate, Technology",
+            "organization": "Nagarro"
+        }
         {
             "name": "mtip",
             "description": "A cross browser javascript custom tooltip plugin. A simple, flexible, extensible and customizable plugin by Manish Kumar under MIT license.",
