@@ -4,17 +4,11 @@
     "designation": "Front End/UI Developer",
     "aboutMe": "I'm a UI Designer/Front End Developer. A Microsoft Certified Specialist in Programming in HTML5 with JavaScript and CSS3. I enjoy taking complex problems and turn them in elegant User Experience design.",
     "contactDetails": {
-        "contactNumber": "+91-7906428656",
-        "alternateNumber": "+91-7906428656",
+        "contactNumber": "",
+        "alternateNumber": "",
         "email": "manishjanky@gmail.com",
         "alertnateEmail": "",
-        "address": {
-            "street": "Phase-2, Saraswati Vihar",
-            "society": "Rohta Road",
-            "city": "Meerut",
-            "pin": "250002",
-            "state": "UP"
-        }
+        "address":
     },
     "education": [
         {
