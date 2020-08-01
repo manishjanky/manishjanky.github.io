@@ -4,11 +4,17 @@
     "designation": "Front End/UI Developer",
     "aboutMe": "I'm a UI Designer/Front End Developer. A Microsoft Certified Specialist in Programming in HTML5 with JavaScript and CSS3. I enjoy taking complex problems and turn them in elegant User Experience design.",
     "contactDetails": {
-        "contactNumber": "",
-        "alternateNumber": "",
+        "contactNumber": "+91-XXXXXXXXXX",
+        "alternateNumber": "+91-XXXXXXXXXX",
         "email": "manishjanky@gmail.com",
         "alertnateEmail": "",
-        "address":null
+        "address":{
+	     "street": "India",		
+             "society": "India",		
+             "city": "India",		
+             "pin": "XXXXXX",		
+             "state": "XX"
+	}
     },
     "education": [
         {
