@@ -1,8 +1,8 @@
 {
     "name": "Manish Kumar",
     "username": "manishjanky",
-    "designation": "Front End/UI Developer",
-    "aboutMe": "I'm a UI Designer/Front End Developer. A Microsoft Certified Specialist in Programming in HTML5 with JavaScript and CSS3. I enjoy taking complex problems and turn them in elegant User Experience design.",
+    "designation": "Web Developer",
+    "aboutMe": "I'm a Web Developer. A Microsoft Certified Specialist in Programming in HTML5 with JavaScript and CSS3. I enjoy taking complex problems and turn them in elegant User Experience design.",
     "contactDetails": {
         "contactNumber": "+91-XXXXXXXXXX",
         "alternateNumber": "+91-XXXXXXXXXX",
@@ -13,7 +13,7 @@
              "society": "India",		
              "city": "India",		
              "pin": "XXXXXX",		
-             "state": "XX"
+             "state": "Uttar Pradesh"
 	}
     },
     "education": [
@@ -41,10 +41,9 @@
     ],
     "summary": [
         "Microsoft Certified Professional and Microsoft Certified Specialist (Programming in HTML5 with JavaScript & CSS3).",
-        "4.5+ years of extensive hands-on experience in web development.",
-        "Possesses working experience on various technologies such as JavaScript, Angular, HTML5, CSS, Bootstrap, jQuery, Ajax",
+        "11+ years of extensive hands-on experience in web development.",
+        "Possesses working experience on various technologies such as JavaScript, Angular, HTML5, CSS, Bootstrap, jQuery, ReactJS, React Native",
         "Experienced team player with excellent communication, interpersonal skills, and ability to work independently.",
-        "Lead a team of 4 members for around 2 years."
     ],
     "skills": [
         {
@@ -54,6 +53,10 @@
         {
             "skill": "Angular",
             "rating": 7
+        },
+        {
+            "skill": "ReactJS",
+            "rating": 6
         },
         {
             "skill": "HTML5",
@@ -78,6 +81,22 @@
         {
             "skill": "jQuery",
             "rating": 8
+        },
+        {
+            "skill":"RxJS",
+            "rating": 6
+        },
+        {
+            "skill":"Docker",
+            "rating": 6
+        },
+        {
+            "skill": "Kubernetes",
+            "rating": 6
+        },
+        {
+            "skill": "Git",
+            "rating": 6
         }
     ],
     "interests": [
@@ -97,12 +116,9 @@
         }
     ],
     "socialProfiles": {
-        "facebook": "http://facebook.com/manishjanky",
-        "googlePlus": "https://plus.google.com/107936389381835582160",
         "github": "https://github.com/manishjanky",
         "linkedin": "https://in.linkedin.com/in/manishjanky",
         "stackOverFlow": "http://stackoverflow.com/users/4948483/manish",
-        "blogger": "https://manishjanky.blogspot.in/"
     },
     "projects": [
         {
@@ -145,14 +161,24 @@
             "designation": "Senior Technical Developer",
             "organization": "Agile Cockpit"
         },
-	{
+	    {
             "name": "SBE",
             "description": "An application that allows small business owners to register their business with the legal authority and open a business account with the bank.",
             "technologies": "JavaScript, HTML5, CSS, SCSS, Angular, Adobe Analytics",
             "client": "Bank",
             "startDate": "Feb 2018",
-            "endDate": "",
+            "endDate": "Oct 2022",
             "designation": "Senior Associate, Technology",
+            "organization": "Nagarro"
+        },
+        {
+            "name": "MRN",
+            "description": "An e-commerce application that allows users to buy beauty and cosmetic products online. It provides a seamless shopping experience with features like product search, cart management, and order tracking.",
+            "technologies": "JavaScript, HTML5, CSS, SCSS, Angular, RxJS",
+            "client": "E-commerce",
+            "startDate": "Nov 2022",
+            "endDate": "",
+            "designation": "Associate, Principal Engineer",
             "organization": "Nagarro"
         },
         {
